@@ -1,5 +1,6 @@
 
-$(function () {
+$(document).ready(function () {
+	//  **slider-manga
 	$('.slider-manga').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -14,7 +15,7 @@ $(function () {
 	$('.slick-next').click(function () {
 		$('html, body').animate({ scrollTop: 200 }, 'fast');
 	});
-	
+
 	$('.slick-prev').click(function () {
 		$('html, body').animate({ scrollTop: 200 }, 'fast');
 	});
@@ -24,17 +25,34 @@ $(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 	});
+	//  **slider-manga
 
-	let buttonFilm		= document.getElementById('button-film'),
-			buttonSerial	= document.getElementById('button-serial'),
-			buttonGame		= document.getElementById('button-game'),
-			buttonMusic		= document.getElementById('button-music');
 
-	let film		= document.getElementById('film'),
-			serial	= document.getElementById('serial'),
-			game		= document.getElementById('game'),
-			music		= document.getElementById('music');
+	// **radiobuttons
+	$.each($('.radiobuttons__item'), function (index, val) {
+		if ($(this).find('input').prop('checked') == true) {
+			$(this).addClass('active');
+		}
+	});
+	$(document).on('click', '.radiobuttons__item', function (event) {
+		$(this).parents('.information-menu__radiobuttons').find('.radiobuttons__item').removeClass('active');
+		$(this).parents('.information-menu__radiobuttons').find('.radiobuttons__item input').prop('checked', false);
+		$(this).toggleClass('active');
+		$(this).find('input').prop('checked', true);
+		return false;
+	});
 
+	// vars
+	let buttonFilm = document.getElementById('button-film'),
+		buttonSerial = document.getElementById('button-serial'),
+		buttonGame = document.getElementById('button-game'),
+		buttonMusic = document.getElementById('button-music');
+
+	let film = document.getElementById('film'),
+		serial = document.getElementById('serial'),
+		game = document.getElementById('game'),
+		music = document.getElementById('music');
+	// vars
 
 	// film
 	buttonFilm.onclick = function () {
@@ -64,12 +82,13 @@ $(function () {
 		serial.classList.add('hide');
 		game.classList.add('hide');
 	};
+	// **radiobuttons
 
-// tournament fract
+	// **tournament fract
 	// select numder TF
 	var filter_select_month = document.getElementById('js-select-month');
 	var filter_select_weeks = document.getElementById('tournament__header-week');
-	
+
 	filter_select_month.onchange = function () {
 		var filter_select = filter_select_weeks.getElementsByClassName('tournament__select-week');
 		for (var i = 0; i < filter_select.length; i++) {
@@ -81,13 +100,13 @@ $(function () {
 		}
 	};
 	//	select numder TF
-	
+
 	//	select week
 	var filter_select_week = document.getElementById('js-select-week');
 	var filter_select_week2 = document.getElementById('js-select-week2');
 	var items_week = document.getElementById('tournament-area');
-	
-	
+
+
 	filter_select_week.onchange = function () {
 		var items = items_week.getElementsByClassName('tournament-area__inner');
 		for (var i = 0; i < items.length; i++) {
@@ -99,7 +118,7 @@ $(function () {
 			}
 		}
 	};
-	
+
 	filter_select_week2.onchange = function () {
 		var items = items_week.getElementsByClassName('tournament-area__inner');
 		for (var i = 0; i < items.length; i++) {
@@ -111,32 +130,33 @@ $(function () {
 			}
 		}
 	};
+	// **tournament fract
 
 	// Модальное окно
 
-// открыть по кнопке
-$('.js-user-btn').click(function () {
+	// открыть по кнопке
+	$('.js-user-btn').click(function () {
 
-	$('.js-overlay-campaign').fadeIn(0);
-	$('.js-overlay-campaign').addClass('hide');
-	window.onscroll = function () { window.scrollTo(0, 0); };
-});
+		$('.js-overlay-campaign').fadeIn(0);
+		$('.js-overlay-campaign').addClass('hide');
+		window.onscroll = function () { window.scrollTo(0, 0); };
+	});
 
-// закрыть на крестик
-$('.js-close-campaign').click(function () {
-	$('.js-overlay-campaign').fadeOut(0);
-	window.onscroll = function () { window.scrollTo(auto, auto); }
-});
-
-
-// закрыть по клику вне окна
-$(document).mouseup(function (e) {
-	var popup = $('.js-popup-campaign');
-	if (e.target != popup[0] && popup.has(e.target).length === 0) {
+	// закрыть на крестик
+	$('.js-close-campaign').click(function () {
 		$('.js-overlay-campaign').fadeOut(0);
 		window.onscroll = function () { window.scrollTo(auto, auto); }
-	}
-});
+	});
+
+
+	// закрыть по клику вне окна
+	$(document).mouseup(function (e) {
+		var popup = $('.js-popup-campaign');
+		if (e.target != popup[0] && popup.has(e.target).length === 0) {
+			$('.js-overlay-campaign').fadeOut(0);
+			window.onscroll = function () { window.scrollTo(auto, auto); }
+		}
+	});
 
 });
 

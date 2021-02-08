@@ -103,16 +103,9 @@
 	}
 }
 
-// first selected
-.tournament-area__inner:not(:first-child) {
-	display: none;
-}
-
 .tf2 {
 	display: none;
 }
-
-
 
 .tournament-area__inner-title {
 	color: $pink;

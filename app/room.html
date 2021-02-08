@@ -50,50 +50,28 @@
 
 		<main class="main">
 			<section class="information">
-				<div class="container">
+				< class="container">
 					<h1 class="title">Списки с некоторой информацией</h1>
 					<div class="information-menu">
-						<form>
-							<button class="information-menu__item button-film" id="button-film" autofocus type="button"
-								onclick="getData()">
-								<span class="information-menu__item-name">Фильмы</span>
-							</button>
-							<button class="information-menu__item button-serial" id="button-serial" type="button" onclick="getData()">
-								<span class="information-menu__item-name">Сериалы</span>
-							</button>
-							<button class="information-menu__item button-game" id="button-game" type="button" onclick="getData()">
-								<span class="information-menu__item-name">Игры</span>
-							</button>
-							<button class="information-menu__item button-music" id="button-music" type="button" onclick="getData()">
-								<span class="information-menu__item-name">Музыка</span>
-							</button>
-						</form>
-					</div>
-
-					<!-- <div class="information-menu">
-							<div class="form-group">
-								<div>
-									<input type="radio" value="1" name="list" class="information-menu__item button-film" id="button-film"
-										checked>
-									<span class="information-menu__item-name">Фильмы</span>
-								</div>
-								<div>
-									<input type="radio" value="2" name="list" class="information-menu__item button-serial"
-										id="button-serial">
-									<span class="information-menu__item-name">Сериалы</span>
-								</div>
-								<div>
-									<input type="radio" value="3" name="list" class="information-menu__item button-game" id="button-game">
-									<span class="information-menu__item-name">Игры</span>
-								</div>
-								<div>
-									<input type="radio" value="4" name="list" class="information-menu__item button-music"
-										id="button-music">
-									<span class="information-menu__item-name">Музыка</span>
-								</div>
+						<div class="information-menu__radiobuttons">
+							<div class="radiobuttons__item" id="button-film">
+								<span>Фильмы</span>
+								<input type="radio" name="nameradio" value="film" checked>
 							</div>
-						</div> -->
-				</div>
+							<div class="radiobuttons__item" id="button-serial">
+								<span>Сериал</span>
+								<input type="radio" name="nameradio" value="serial">
+							</div>
+							<div class="radiobuttons__item" id="button-game">
+								<span>Кино</span>
+								<input type="radio" name="nameradio" value="game">
+							</div>
+							<div class="radiobuttons__item" id="button-music">
+								<span>Игры</span>
+								<input type="radio" name="nameradio" value="music">
+							</div>
+						</div>
+					</div>
 			</section>
 
 			<section class="information-list">
