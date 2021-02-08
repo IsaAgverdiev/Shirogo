@@ -1,0 +1,2525 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shirogo’s Room</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<div class="footer-down">
+		<div class="content">
+			<header class="header">
+				<div class="container">
+					<div class="header__inner">
+						<a class="header__logo-link" href="index.html">
+							<div class="header__logo">
+								<img class="header__logo-img" src="images/logo.png " alt="logo">
+								<span class="header__logo-name">
+									Shirogo’s Room
+								</span>
+							</div>
+						</a>
+						<nav class="menu">
+							<ul class="menu__list">
+								<li class="menu__list-item">
+									<a href="index.html" class="menu__list-link">Главная</a>
+								</li>
+								<li class="menu__list-item">
+									<a href="butik.html" class="menu__list-link">Бутик</a>
+								</li>
+								<li class="menu__list-item">
+									<a href="room.html" class="menu__list-link">Комната</a>
+								</li>
+								<li class="menu__list-item">
+									<a href="manga.html" class="menu__list-link">Манга</a>
+								</li>
+							</ul>
+						</nav>
+						<button class="user-btn js-user-btn">
+							<img class="user-btn__img" src="images/user-img.svg" alt="user">
+							<span class="user-btn__text">Войти</span>
+						</button>
+					</div>
+				</div>
+			</header>
+		</div>
+
+
+		<main class="main">
+			<section class="information">
+				<div class="container">
+					<h1 class="title">Списки с некоторой информацией</h1>
+					<div class="information-menu">
+						<form>
+							<button class="information-menu__item button-film" id="button-film" autofocus type="button"
+								onclick="getData()">
+								<span class="information-menu__item-name">Фильмы</span>
+							</button>
+							<button class="information-menu__item button-serial" id="button-serial" type="button" onclick="getData()">
+								<span class="information-menu__item-name">Сериалы</span>
+							</button>
+							<button class="information-menu__item button-game" id="button-game" type="button" onclick="getData()">
+								<span class="information-menu__item-name">Игры</span>
+							</button>
+							<button class="information-menu__item button-music" id="button-music" type="button" onclick="getData()">
+								<span class="information-menu__item-name">Музыка</span>
+							</button>
+						</form>
+					</div>
+
+					<!-- <div class="information-menu">
+							<div class="form-group">
+								<div>
+									<input type="radio" value="1" name="list" class="information-menu__item button-film" id="button-film"
+										checked>
+									<span class="information-menu__item-name">Фильмы</span>
+								</div>
+								<div>
+									<input type="radio" value="2" name="list" class="information-menu__item button-serial"
+										id="button-serial">
+									<span class="information-menu__item-name">Сериалы</span>
+								</div>
+								<div>
+									<input type="radio" value="3" name="list" class="information-menu__item button-game" id="button-game">
+									<span class="information-menu__item-name">Игры</span>
+								</div>
+								<div>
+									<input type="radio" value="4" name="list" class="information-menu__item button-music"
+										id="button-music">
+									<span class="information-menu__item-name">Музыка</span>
+								</div>
+							</div>
+						</div> -->
+				</div>
+			</section>
+
+			<section class="information-list">
+				<div class="container">
+					<div class="area film-area" id="film">
+						<h2 class="pink-text">2018 год</h2>
+						<ul>
+							<li>07.11 My Little Pony Equestria Girls</li>
+							<li>14.11 My Little Pony Equestria Girls: Rainbow Rocks</li>
+							<li>21.11 My Little Pony Equestria Girls: Friendship Games</li>
+							<li>28.11 My Little Pony Equestria Girls: Legend of Everfree</li>
+							<li>05.12 Зверополис</li>
+							<li>12.12 "9(Nine)"</li>
+							<li>19.12 My Little Pony(2017)</li>
+							<li>28.12 Хранители Снов</li>
+						</ul>
+						<h2 class="pink-text">2019 год</h2>
+						<ul>
+							<li>11.01 1+1</li>
+							<li>18.01-15.03 Пила 1-8</li>
+							<li>22.03 Пассажиры поезда 123</li>
+							<li>29.03 Собачья жизнь</li>
+							<li>05.04 Воспоминания о Марни</li>
+							<li>12.04 Мост в Терабитию</li>
+							<li>19.04 Человек-Паук: Через Вселенные</li>
+							<li>03.05 Дедпул</li>
+							<li>10.05 Дедпул 2</li>
+							<li>17.05 Навсикая из долины ветров</li>
+							<li>24.05 Вечерний экспресс «Сансет Лимитед»</li>
+							<li>31.05 Ходячий замок</li>
+							<li>14.06 Убойные каникулы</li>
+							<li>14.06 Initial D - Third Stage</li>
+							<li>21.06 Город героев</li>
+							<li>28.06 Унесённые призраками</li>
+							<li>05.07 Бойцовский клуб</li>
+							<li>19.07 Грань будущего</li>
+							<li>24.07 Тайна Коко</li>
+							<li>28.07 Исходный код</li>
+							<li>03.08 Хатико</li>
+							<li>09.08-04.10| Форсаж 1-Хоббс и Шоу</li>
+							<li>11.10 Большой Куш</li>
+							<li>25.10 Initial D - Экстремальные гонки</li>
+							<li>01.11 Silent Hill</li>
+							<li>08.11 Богемская рапсодия</li>
+							<li>15.11 Initial D: Legend 1</li>
+							<li>15.11 Initial D: Legend 2</li>
+							<li>22.11 Initial D: Legend 3</li>
+							<li>28.11 Матрица</li>
+							<li>05.12 Матрица: Перезагрузка</li>
+							<li>09.12 Вольт</li>
+							<li>13.12 Матрица: Революция</li>
+						</ul>
+						<h2 class="pink-text">2020 год</h2>
+						<ul>
+							<li>31.01 Очень страшное кино</li>
+							<li>20.03 Сад изящных слов</li>
+							<li>03.04 Джокер (2019)</li>
+							<li>10.04 Несносный дед</li>
+							<li>01.05 Человек-Паук</li>
+							<li>08.05 Человек-Паук 2</li>
+							<li>15.05 Человек-Паук 3</li>
+							<li>22.05 Новый Человек-Паук</li>
+							<li>29.05 Новый Человек-Паук: Высокое напряжение</li>
+							<li>05.06 Дитя Погоды</li>
+							<li>12.06 Железный человек</li>
+							<li>19.06 Железный человек 2</li>
+							<li>26.06 Первый мститель</li>
+							<li>27.06 Тор</li>
+							<li>03.07 Мстители</li>
+							<li>04.07 Железный человек 3</li>
+							<li>10.07 Тор 2: Царство тьмы</li>
+							<li>11.07 Первый мститель: Другая война</li>
+							<li>17.07 Стражи Галактики</li>
+							<li>18.07 Стражи Галактики 2</li>
+							<li>22.07 Вперёд</li>
+							<li>24.07 Мстители: Эра Альтрона</li>
+							<li>30.07 Человек-Муравей</li>
+							<li>31.07 Первый Мститель: Противостояние</li>
+							<li>31.07 Код Гиас: Воскресший Лелуш</li>
+							<li>07.08 Доктор Стрэндж</li>
+							<li>14.08 Человек-Паук: Возвращение Домой</li>
+							<li>21.08 Тор: Рагнарёк</li>
+						</ul>
+					</div>
+
+					<div class="area serial-area hide" id="serial">
+						<h2 class="pink-text">2018 год</h2>
+						<ul>
+							<li>6 стримов с 26.09.18: My Little Pony - 1 сезон (26 серий)</li>
+							<li>+3 стрима с 12.12.18: Рик и Морти - 1, 2, 3 сезоны</li>
+						</ul>
+
+						<h2 class="pink-text">2019 год</h2>
+						<ul>
+							<li>+7 стримов с 12.12.18: Рик и Морти - 1, 2, 3 сезоны</li>
+							<li>9 стримов с 22.03.19: Initial D - First Stage (26 серий)</li>
+							<li>4 стрима с 08.03.19: Adventure Time - 1 сезон (13 серий)</li>
+							<li>3 стрима с 05.04.19: Hellsing (13 серий)</li>
+							<li>2 стрима с 30.04.19: По ту сторону изгороди (10 серий)</li>
+							<li>2 стрима с 31.05.19: Initial D - Second Stage (13 серий)</li>
+							<li>7 стримов с 21.06.19: Initial D - Fourth Stage (24 серии)</li>
+							<li>4 стрима c 09.08.19: Initial D - Fifth Stage (14 серий)</li>
+							<li>06.09.19: Initial D - Final Stage (4 серии)</li>
+							<li>8 стримов с 13.09.19: Hellsing Ultimate OVA (10 серий)</li>
+							<li>7 стримов с 01.11.19: My Little Pony - 2 сезон (26 серий)</li>
+							<li>2 стрима с 26.12.19: Boku dake ga Inai machi (12 серий)</li>
+						</ul>
+
+						<h2 class="pink-text">2020 год</h2>
+						<ul>
+							<li>3 стрима с 10.01.20: Re:Zero - 1 сезон (25 серий)</li>
+							<li>07.02.20: Re:Zero Memory Snow OVA</li>
+							<li>5 стримов с 07.02.20: Самурай Чамплу (26 серий)</li>
+							<li>4 стрима с 20.03.20: Из Нового Света (25 серий)</li>
+							<li>5 стримов с 17.04.20: Паразит - Учение о жизни (24 серии)</li>
+							<li>24.04.20: Re:Zero Замороженные узы OVA 2</li>
+							<li>3 стрима с 18.05.20: Смешарики 2020 (12 серий)</li>
+							<li>2 стрима с 22.05.20: Восточный Эдем (11 серий)</li>
+							<li>2 стрима с 05.06.20: 91 Days (12 серий)</li>
+							<li>4 стрима с 12.06.20: Башня Бога (13 серий)</li>
+							<li>7 стримов с 26.06.20: Код Гиас - 1 сезон (25 серий)</li>
+							<li>13 стримов с 10.07.20: Re:Zero - 2 сезон (13 серий)</li>
+							<li>5 стримов с 17.07.20: Код Гиас - 2 сезон (25 серий)</li>
+							<li>? стримов с 07.08.20: Хантер Х Хантер (2011) (148 серий)</li>
+						</ul>
+					</div>
+
+					<div class="area game-area hide" id="game">
+						<h2 class="pink-text">2018 год</h2>
+						<ul>
+							<li>с 19.06: ABZU | We were here | We were here too</li>
+							<li>Firewatch | INSIDE | LIMBO</li>
+							<li>Metro 2033 | Metro Last Light</li>
+							<li>04.09 Brothers - A Tale of Two Sons</li>
+							<li>2 стрима с 11.09: Slender: The Arrival</li>
+							<li>10 стримов с 25.09: NieR: Automata</li>
+							<li>04.12 A Story About My Uncle</li>
+							<li>3 стрима с 11.12: Remember Me</li>
+						</ul>
+
+						<h2 class="pink-text">2019 год</h2>
+						<ul>
+							<li>6 стримов с 03.01: S.T.A.L.K.E.R. - Тень Чернобыля</li>
+							<li>6 стримов с 24.01: S.T.A.L.K.E.R. - Чистое Небо</li>
+							<li>7 стримов с 15.02: Metro Exodus</li>
+							<li>6 стримов с 16.02: S.T.A.L.K.E.R. - Зов Припяти</li>
+							<li>12 стримов с 01.05: Dark Souls (remastered)</li>
+							<li>01.07 When The Darkness Comes</li>
+							<li>2 стрима с 18.07: Outlast</li>
+							<li>2 стрима с 23.07: Outlast 2</li>
+							<li>4 стрима с 25.07: Cuphead</li>
+							<li>15.08 SUPERHOT</li>
+							<li>6 стримов с 27.08: Prey</li>
+							<li>2 стрима с 02.10: Мадагаскар</li>
+							<li>12 стримов с 08.10: The Witcher</li>
+							<li>2 стрима с 09.10: Мадагаскар 2</li>
+							<li>+5 стримов с 23.10: DARK SOULS 2</li>
+						</ul>
+
+						<h2 class="pink-text">2020 год</h2>
+						<ul>
+							<li>06.01: Shank</li>
+							<li>+6 стримов с 07.01: DARK SOULS 2</li>
+							<li>2 стрима с 16.03: Doki Doki Literature Club</li>
+							<li>23.03: The Stanley Parable</li>
+							<li>3 стрима с 26.03: DmC Devil May Cry</li>
+							<li>3 стрима с 09.04: A Plague Tale Innocence</li>
+							<li>15.06: Helltaker</li>
+							<li>4 стрима с 20.06: OneShot</li>
+						</ul>
+					</div>
+
+					<div class="area music-area hide" id="music">
+						<span class="music-area__title">Данный список представляет собой перечень песен, которые я точно могу
+							сыграть на гитаре</span>
+
+						<h2 class="pink-text">А</h2>
+						<ul>
+							<li>Агата Кристи - Два корабля</li>
+							<li>Агата Кристи - Как на войне</li>
+							<li>Агата Кристи - Легион</li>
+							<li>Агата Кристи - Опиум для никого</li>
+							<li>Агата Кристи - Пират</li>
+							<li>Александр Пистолетов - Новый пират</li>
+							<li>Александр Розенбаум - Есаул</li>
+							<li>Александр Рыбак - Я не верю в чудеса</li>
+							<li>Алексей Пономорёв - А мы не ангелы, парень</li>
+							<li>Алексин - Кошка</li>
+							<li>Алладин - Арабская ночь</li>
+							<li>Анимия - Где-то</li>
+							<li>Ария - Беспечный ангел</li>
+							<li>Ария - Потерянный Рай</li>
+							<li>Ария - Свобода</li>
+							<li>Ария - Там высоко</li>
+						</ul>
+
+						<h2 class="pink-text">Б</h2>
+						<ul>
+							<li>Баста - Выпускной (Медлячок)</li>
+							<li>Баста - Сансара</li>
+							<li>Боярский Михаил - Зеленоглазое такси</li>
+							<li>Бременские музыканты - Ничего на свете лучше нету</li>
+							<li>Бременские музыканты - Луч солнца золотого</li>
+							<li>Бременские музыканты - Песня разбойников (Говорят, мы бяки-буки)</li>
+							<li>Бутырка - Аттестат</li>
+						</ul>
+
+						<h2 class="pink-text">В</h2>
+						<ul>
+							<li>Валентин Стрыкало - Если будет снег</li>
+							<li>Высоцкий - Песня о друге</li>
+							<li>Высоцкий - Утренняя гимнастика</li>
+						</ul>
+
+						<h2 class="pink-text">Г</h2>
+						<ul>
+							<li>Где Беломора достать (песни у костра)</li>
+							<li>Горшенев Михаил - Иван Факов</li>
+							<li>Градусы - Голая</li>
+							<li>Градусы - Режиссёр</li>
+							<li>Гражданская Оборона - Все идет по плану</li>
+							<li>Гражданская Оборона - Солдатами не рождаются</li>
+							<li>Грибы - Тает лёд</li>
+							<li>Григорий Лепс - Она не твоя</li>
+							<li>Григорий Лепс - Рюмка водки на столе</li>
+							<li>Григорий Лепс - Самый лучший день</li>
+							<li>Григорий Лепс - Я тебе не верю</li>
+							<li>Гречка - Анимешница</li>
+						</ul>
+
+						<h2 class="pink-text">Д</h2>
+						<ul>
+							<li>ДДТ - Что такое осень</li>
+							<li>Дед Максим (песни у костра)</li>
+							<li>Диспетчера - 2000 Баксов за сигарету</li>
+						</ul>
+
+						<h2 class="pink-text">Ж</h2>
+						<ul>
+							<li>Жуки - Батарейка</li>
+						</ul>
+
+						<h2 class="pink-text">З</h2>
+						<ul>
+							<li>Звери - Все, что касается</li>
+							<li>Звери - Никуда не надо</li>
+							<li>Звери - Районы, кварталы</li>
+						</ul>
+
+						<h2 class="pink-text">И</h2>
+						<ul>
+							<li>Игорь Корнелюк - Город, которого нет</li>
+							<li>ИМПЛОZИЯ - Конвейер</li>
+						</ul>
+
+						<h2 class="pink-text">К</h2>
+						<ul>
+							<li>Катюша (военные песни)</li>
+							<li>Король и Шут - Кукла колдуна</li>
+							<li>Король и Шут - Лесник</li>
+							<li>Король и Шут - Танец злобного гения</li>
+							<li>Котопёс</li>
+							<li>Кукрыниксы - Есенин</li>
+						</ul>
+
+						<h2 class="pink-text">Л</h2>
+						<ul>
+							<li>Ласковый Май - Детство</li>
+							<li>Ленинград - Обезьяна и Орёл</li>
+							<li>Любэ - А заря</li>
+							<li>Любэ - Давай за</li>
+							<li>Любэ - Комбат</li>
+							<li>Любэ - Конь</li>
+							<li>Любэ - Солдат</li>
+							<li>Любэ - Ты неси меня река (БОЕМ)</li>
+							<li>Ляпис Трубецкой - Ау</li>
+							<li>Ляпис Трубецкой - В платье белом</li>
+							<li>Ляпис Трубецкой - Евпатория</li>
+							<li>Ляпис Трубецкой - Молох</li>
+							<li>Ляпис Трубецкой - Я верю</li>
+						</ul>
+
+						<h2 class="pink-text">М</h2>
+						<ul>
+							<li>Макс Корж - Жить в кайф</li>
+							<li>Макс Корж - Мотылёк</li>
+							<li>Макс Корж - Слово пацана</li>
+							<li>Машина Времени - Поворот</li>
+							<li>Мельница - Никогда</li>
+							<li>Мельница - Прощай</li>
+							<li>Монеточка - Нимфоманка</li>
+						</ul>
+
+						<h2 class="pink-text">Н</h2>
+						<ul>
+							<li>На безымянной высоте</li>
+							<li>Нюша - Вою на луну</li>
+						</ul>
+
+						<h2 class="pink-text">О</h2>
+						<ul>
+							<li>Обе-рек - Воском плавится</li>
+							<li>Олег Газманов - Путана</li>
+							<li>Олег Газманов - Ясные дни</li>
+						</ul>
+
+						<h2 class="pink-text">П</h2>
+						<ul>
+							<li>Павел Пламенев - Вне смерти</li>
+							<li>Павел Пламенев - Вот тебе моя кровь</li>
+							<li>Павел Пламенев - Геймер</li>
+							<li>Песенка Фунтика</li>
+							<li>Песня голубого щенка</li>
+							<li>Песня мамонтёнка</li>
+							<li>Песня про паладина</li>
+							<li>Порнофильмы - Я так соскучился</li>
+							<li>Последний бой</li>
+						</ul>
+
+						<h2 class="pink-text">Р</h2>
+						<ul>
+							<li>Рота подъем (песни у костра)</li>
+							<li>Руки Вверх - Алешка</li>
+							<li>Руки Вверх - 18 мне уже</li>
+						</ul>
+
+						<h2 class="pink-text">С</h2>
+						<ul>
+							<li>Свинцовый Туман - Я знаю, придет тот день</li>
+							<li>Сектор Газа - Вой на луну</li>
+							<li>Сектор Газа - Нас ждут из темноты</li>
+							<li>Смешарики - От винта</li>
+							<li>Солдаты - Юность в сапогах</li>
+							<li>Сплин - Выхода нет</li>
+							<li>Сплин - Романс</li>
+						</ul>
+
+						<h2 class="pink-text">Т</h2>
+						<ul>
+							<li>ТАйМСКВЕР - Мой серый город</li>
+							<li>ТАйМСКВЕР - Реквием</li>
+							<li>Танцы Минус - Город</li>
+							<li>Триста килограмм тротила</li>
+						</ul>
+
+						<h2 class="pink-text">Ц</h2>
+						<ul>
+							<li>Цой - Группа крови</li>
+							<li>Цой - Звезда по имени Солнце</li>
+							<li>Цой - Кукушка</li>
+						</ul>
+
+						<h2 class="pink-text">5</h2>
+						<ul>
+							<li>5nizza - Я солдат</li>
+							<li>5 регион - 4 пацана</li>
+						</ul>
+
+						<h2 class="pink-text">A</h2>
+						<ul>
+							<li>A Day to Remember - End of me</li>
+							<li>Astrid S - Think Before I Talk</li>
+						</ul>
+
+						<h2 class="pink-text">B</h2>
+						<ul>
+							<li>Beatles - Yesterday</li>
+							<li>BONNIE TYLER - HOLDING OUT FOR A HERO</li>
+						</ul>
+
+						<h2 class="pink-text">C</h2>
+						<ul>
+							<li>Celine Dion - My Heart Will Go On</li>
+							<li>Cranberries - Zombie</li>
+						</ul>
+
+						<h2 class="pink-text">D</h2>
+						<ul>
+							<li>Daniel Powter - Bad Day</li>
+							<li>Disturbed - The Sound of Silence</li>
+						</ul>
+
+						<h2 class="pink-text">E</h2>
+						<ul>
+							<li>Eels - I Need Some Sleep</li>
+						</ul>
+
+						<h2 class="pink-text">H</h2>
+						<ul>
+							<li>Hallelujah (OST "Shrek")</li>
+							<li>Hollywood Undead - Circles</li>
+						</ul>
+
+						<h2 class="pink-text">J</h2>
+						<ul>
+							<li>Joji - Yeah Right</li>
+							<li>Jukio Kallio - Kings and Queens of Wasteland</li>
+						</ul>
+
+						<h2 class="pink-text">L</h2>
+						<ul>
+							<li>Limp Bizkit - Behind Blue Eyes</li>
+							<li>Linkin Park - Numb</li>
+							<li>Lumen - Сид и Ненси</li>
+							<li>Lumen - Три пути</li>
+						</ul>
+
+						<h2 class="pink-text">M</h2>
+						<ul>
+							<li>Mushmellow - Loser</li>
+						</ul>
+
+						<h2 class="pink-text">N</h2>
+						<ul>
+							<li>Naruto ED 1 (Akeboshi - Wind)</li>
+							<li>Naruto OP 1 (Hound Dog - Rocks)</li>
+							<li>Naruto OP 5 (Sambomaster - Seishun Kyosokyoku)</li>
+							<li>Nirvana - Rape Me</li>
+							<li>Nirvana - Smells Like Teen Spirit</li>
+						</ul>
+
+						<h2 class="pink-text">P</h2>
+						<ul>
+							<li>Pokemon OST (Gotta catch 'em all)</li>
+							<li>Pussycat Dolls - Jai Ho</li>
+						</ul>
+
+						<h2 class="pink-text">R</h2>
+						<ul>
+							<li>Rednex - Cotton Eyed Joe</li>
+							<li>Rednex - Shooter</li>
+							<li>Ronya - Work Harder</li>
+						</ul>
+
+						<h2 class="pink-text">S</h2>
+						<ul>
+							<li>Shaman King - Opening</li>
+							<li>Skillet - Fire and Fury</li>
+							<li>Smash Mouth - All Star</li>
+							<li>SUNBURST - ГЕТТО</li>
+						</ul>
+
+						<h2 class="pink-text">T</h2>
+						<ul>
+							<li>The Hatters - Слово пацана</li>
+						</ul>
+
+						<h2 class="pink-text">W</h2>
+						<ul>
+							<li>Winx - Если решишь, можешь ты стать</li>
+							<li>Winx - WInx вернулись к нам</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="tournament">
+				<div class="container">
+					<h1 class="title title-tournament">Турнир фракций</h1>
+					<div class="tournament__header">
+						<select class="tournament__header-tf js-select-month" id="js-select-month">
+							<option value="tf1">Турнир фракций 1</option>
+							<option value="tf2">Турнир фракций 2</option>
+						</select>
+						<div class="tournament__header-week" id="tournament__header-week">
+							<select class="tournament__select-week tf1" id="js-select-week">
+								<option value="tf1-1w">Неделя 1</option>
+								<option value="tf1-2w">Неделя 2</option>
+								<option value="tf1-3w">Неделя 3</option>
+								<option value="tf1-4w">Неделя 4</option>
+								<option value="tf1-5w">Неделя 5</option>
+								<option value="tf1-6w">Неделя 6</option>
+								<option value="tf1-rw">Результаты</option>
+							</select>
+
+							<select class="tournament__select-week tf2" id="js-select-week2">
+								<option value="tf2-1w">Неделя 1</option>
+								<option value="tf2-2w">Неделя 2</option>
+								<option value="tf2-3w">Неделя 3</option>
+								<option value="tf2-4w">Неделя 4</option>
+								<option value="tf2-5w">Неделя 5</option>
+								<option value="tf2-6w">Неделя 6</option>
+								<option value="tf2-rw">Результаты</option>
+							</select>
+
+						</div>
+					</div>
+
+					<div class="tournament-area" id="tournament-area">
+						<!-- <div class="tournament__slider"> -->
+						<div class="tournament-area__inner tf1-1w" id="tf1-1w">
+							<h2 class="bold tournament-area__inner-title">1. Jackbox</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>HolYSP: 2 место (2)</li>
+									<li>malvina_ma: 3 место, 3 место (2)</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: 2, 3 места</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 1,1 места, 3 место (2)</li>
+								</ul>
+
+								<h3 class="semibold">ДВОРФДАН</h3>
+								<ul>
+									<li>diaz_380: 1,1,1,2,3,3 места</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>AsterAc: 1,2,2,2,3,3 места (2)</li>
+									<li>mercenaryJulian: 2 место, 1,2,2,4 места (2)</li>
+								</ul>
+
+								<h3 class="semibold">ВЕЛИКАЯ ОРДА</h3>
+								<ul>
+									<li>kunahare_tsun `-`</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. Dark Souls</h2>
+							Ответ: 25 смертей
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl (23): 1 место (2)</li>
+									<li>chusui_uchiha (27): 1 место (2)</li>
+								</ul>
+
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>0living_person0 (17): 2 место (4)</li>
+									<li>malvina_ma (45)</li>
+									<li>HolYSP (53)</li>
+									<li>yobani_pomidorka (73)</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian (35): 3 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. SiGame</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">КУЛЬТ МЁРТВЫХ</h3>
+								<ul>
+									<li>Svaiat: 3,4 места (1ф)</li>
+								</ul>
+
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>yobani_pomidorka: 4В + пак (2ф)</li>
+									<li>HolYSP: 1,2,4 места (2)</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 1,3,4 место (2)</li>
+								</ul>
+
+								<h3 class="semibold">ДВОРФДАН</h3>
+								<ul>
+									<li>Diaz_380: 1,1,1 места</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>AsterAc: 3,4 места (2)</li>
+									<li>mercenaryJulian: 2 место (2)</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: 1В + пак, 4 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">4. Крокодил-рисунки</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl (28) - 1 место</li>
+									<li>chusui_uchiha (2)</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian (22) - 2 место</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay (13)</li>
+								</ul>
+
+								<h3 class="semibold">ДВОРФДАН</h3>
+								<ul>
+									<li>Diaz_380 (14) - 4 место</li>
+								</ul>
+
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>malvina_ma (3)</li>
+									<li>0living_person0 (1)</li>
+									<li>HolYSP (1)</li>
+									<li>yung_aaalik (4)</li>
+									<li>Mode_Of_God (3)</li>
+								</ul>
+
+								<h3 class="semibold">КУЛЬТ МЁРТВЫХ</h3>
+								<ul>
+									<li>Svaiat (2)﻿</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">Результаты:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. ОТРЯД СТАЛКЕРОВ</li>
+									<li>2. ДВОРФДАН</li>
+									<li>3. АНТИМАГИЧЕСКИЙ ОРДЕН</li>
+									<li>4. ЛОХ-СОСТАВ</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="tournament-area__inner tf1-2w" id="tf1-2w">
+							<h2 class="bold tournament-area__inner-title">1. Jackbox</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>HolYSP: 1 место (вс6), 1 место (3), 3 место (2), 1 место (3)</li>
+									<li>Mode_Of_God: 2 место (3)</li>
+									<li>yobani_pomidorka: 3 место (3), 2 место (3)</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: 3 место (вс5), 3 место (вс6), 3 место</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 2 место (вс5)</li>
+									<li>chusui_uchiha: `-`</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>AsterAc: 2 место (2 вс6)</li>
+									<li>mercenaryJulian: 4 место (вс5), 2 место (вс6), 3 место (2 вс6), 3 место (2), 2 место (вс7), 1
+										место (вс7), 2 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. Dark Souls</h2>
+							Ответ: 31 смертей
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>chusui_uchiha (35): 3 место</li>
+								</ul>
+
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>0living_person0 (27): 3 место (3)</li>
+									<li>malvina_ma (23): 4 место (3)</li>
+									<li>HolYSP (20)</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian (28): 2 место</li>
+								</ul>
+
+								<h3 class="semibold">КУЛЬТ МЁРТВЫХ</h3>
+								<ul>
+									<li>Svaiat (30): 1 место</li>
+								</ul>
+
+								<h3 class="semibold">АССАСИНЫ</h3>
+								<ul>
+									<li>MrJames298 (40): 5 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. SiGame</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">КУЛЬТ МЁРТВЫХ</h3>
+								<ul>
+									<li>Svaiat: 1,4,4 места (1ф)</li>
+								</ul>
+
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>yobani_pomidorka: 2,5В, (3ф (2))</li>
+									<li>HolYSP: 1В, 3 место (2) (2ф), 1 место</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 1 место(2) (2ф), 2,2,4 места</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>AsterAc: 4 место (2ф)</li>
+									<li>mercenaryJulian: (2ф (2)), 1,5В +пак, 1 место</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: (4ф), 1 место (1ф), 2,3 места (3ф)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">4. Угадай мелодию</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>HolYSP(15): 3 место</li>
+									<li>0living_person0(3)</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl(35): 1 место </li>
+								</ul>
+
+								<h3 class="semibold">ДВОРФДАН</h3>
+								<ul>
+									<li>fakeregem(18): 2 место</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian(5)</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay (9)</li>
+								</ul>
+
+								<h3 class="semibold">КУЛЬТ МЁРТВЫХ</h3>
+								<ul>
+									<li>Svaiat(18): 2 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">5. OVERWATCH</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. количество выигрышей: 2 ПОБЕДЫ</li>
+									<li>2. максимальное число убийств: 24 УБИЙСТВА</li>
+									<li>3. минимальное число смертей: 4 СМЕРТИ</li>
+								</ul>
+
+								<h3 class="semibold">КУЛЬТ МЁРТВЫХ</h3>
+								<ul>
+									<li>Svaiat (3w, 45k, 10d)</li>
+								</ul>
+
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>HolYSP (4w, 31k, 3d)</li>
+									<li>0living_person0 (2w)</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl (2w, 39k, 21d)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">Результаты:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. ОТРЯД СТАЛКЕРОВ [•]</li>
+									<li>2. АНТИМАГИЧЕСКИЙ ОРДЕН [↑]</li>
+									<li>3. ЛОХ-СОСТАВ [↑]</li>
+									<li>4. ДВОРФДАН [↓↓]</li>
+									<li>5. ЛИГА ЭЛЬФОВ</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="tournament-area__inner tf1-3w" id="tf1-3w">
+							<h2 class="bold tournament-area__inner-title">1. Jackbox</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>HolYSP: 1, 4 места (вс7), 1, 3 места (вс6), 1, 4 места (2)</li>
+									<li>yobani_pomidorka: 1, 1, 3 места (2), 2 место</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: 1, 3 места (вс6), 2, 4 места (вс7), 2, 3 места</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 1 место (вс7), 2 место</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian: 2, 2 места (вс6), 1, 2 места, 3 место (вс7))</li>
+								</ul>
+
+								<h3 class="semibold">КУЛЬТ МЁРТВЫХ</h3>
+								<ul>
+									<li>Svaiat: 2, 2 места (вс7)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. Dark Souls</h2>
+							Ответ: 32 смертей
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>chusui_uchiha (33): 1 место</li>
+								</ul>
+
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>0yobani_pomidorka (27): 3 место (3)</li>
+									<li>malvina_ma (22): 4 место (3)</li>
+									<li>HolYSP (19)</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian (28): 2 место (2)</li>
+									<li>senyach (14)</li>
+								</ul>
+
+								<h3 class="semibold">КУЛЬТ МЁРТВЫХ</h3>
+								<ul>
+									<li>Svaiat (15)</li>
+								</ul>
+
+								<span class="non-left">Ответ: 42 смертей</span>
+								<h3 class="semibold death42">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>chusui_uchiha (24)</li>
+								</ul>
+
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>malvina_ma (25)</li>
+									<li>HolYSP (33) - 1 место</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian (25)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. SiGame</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ДВОРФДАН</h3>
+								<ul>
+									<li>fakeregem: 1 место (3ф) + 1 балл</li>
+								</ul>
+
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>yobani_pomidorka: 2В</li>
+									<li>virrogand: 1 место, 2 место (2), (2ф)</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 1,2,3 места, 1 полуместо, (1ф)</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian: 2 место, 1В + пак</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: 3,3 места, 2 полуместо</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">4. OVERWATCH</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1) количество выигрышей: 2</li>
+									<li>2) максимальное число убийств: 24</li>
+									<li>3) минимальное число смертей: 4</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian (**2w**, __*24k*__, __*6d*__)</li>
+								</ul>
+
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>HolYSP (**2w**, __*28k*__, __*4d*__)</li>
+									<li>0living_person0 (4w)</li>
+									<li>malvina_ma (3w, 16k, 8d)</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>chusui_uchiha (**2w**, 31k, 8d)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">Результаты:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. ЛОХ-СОСТАВ [↑↑]</li>
+									<li>2. ОТРЯД СТАЛКЕРОВ [↓]</li>
+									<li>3. АНТИМАГИЧЕСКИЙ ОРДЕН [↓]</li>
+									<li>4. ЛИГА ЭЛЬФОВ [↑]</li>
+									<li>5. ДВОРФДАН [↓]</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="tournament-area__inner tf1-4w" id="tf1-4w">
+							<h2 class="bold tournament-area__inner-title">1. Jackbox</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>HolYSP: 1,1,3,4 места (2), 1 место (4), 3,3 места (3)</li>
+									<li>yobani_pomidorka: 1 место (4), 3 место (2)</li>
+									<li>virrogand: 1 место (3)</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: 1 место (4), 3 место</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 2,2,4,4 места</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian: 1,1 места, 2 место (2)</li>
+								</ul>
+							</div>
+							<h2 class="bold tournament-area__inner-title">2. Dark Souls</h2>
+							Ответ: 55 смертей
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>malvina_ma (45): 1 место (3)</li>
+									<li>HolYSP (73)</li>
+									<li>arxitriklin (43)</li>
+								</ul>
+
+								<h3 class="semibold">КУЛЬТ МЁРТВЫХ</h3>
+								<ul>
+									<li>Svaiat (85)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. SiGame</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>yobani_pomidorka: 2 место, 3Ф</li>
+									<li>virrogand: 4 место (3)</li>
+									<li>HolYSP: 2 место (2), 1В</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 3,3,2 места, 1Ф</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian: 1 место (2), 1 место, 1В + пак, 2Ф</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: 1 место, 1В + пак</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">Результаты:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. ЛОХ-СОСТАВ [•]</li>
+									<li>2. ОТРЯД СТАЛКЕРОВ [•]</li>
+									<li>3. АНТИМАГИЧЕСКИЙ ОРДЕН [•]</li>
+									<li>4. ЛИГА ЭЛЬФОВ [•]</li>
+									<li>5. ДВОРФДАН [•]</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="tournament-area__inner tf1-5w" id="tf1-5w">
+							<h2 class="bold tournament-area__inner-title">1. Угадай мелодию + SiGame Year Pack + Jackbox</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>HolYSP: 17 баллов, 7 баллов</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 19 баллов, 16 баллов, 1, 2 места, 1 место (2)</li>
+									<li>chusui_uchiha: 6 баллов, 3,4 места (2)</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian: 3 балла, 1,2 места</li>
+									<li>AsterAc: 2 балла</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: 7 баллов, 3, 3 места</li>
+								</ul>
+
+								<h3 class="semibold">КУЛЬТ МЁРТВЫХ</h3>
+								<ul>
+									<li>Svaiat: 4 балла, 5 баллов, 2,3,4 места</li>
+								</ul>
+
+								<h3 class="semibold">ДВОРФДАН</h3>
+								<ul>
+									<li>fakeregem: 16 баллов, 30 баллов, 1, 4 места</li>
+								</ul>
+
+
+							</div>
+							<h2 class="bold tournament-area__inner-title">2. Dark Souls</h2>
+							Ответ: 52 смертей
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>HolYSP (25, 45) - 2 место</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>chusui_uchiha (47, 27) - 1 место</li>
+									<li>yaleretayaeryl (29, 37)</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay (42, 69) - 3 место</li>
+								</ul>
+
+								<h3 class="semibold">ЕДИНОЕ ЗЛО</h3>
+								<ul>
+									<li>s0chn1k (25)</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian (35)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. SiGame</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>yobani_pomidorka: 3 место (2), 1 В, 2/3 В</li>
+									<li>HolYSP: 2 место</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 1,3,3 места</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay (42, 69) - 3 место</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian: 1, 2 места, 1В + пак</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: 1, 2 места, 1/3 В</li>
+								</ul>
+							</div>
+
+
+							<h2 class="bold tournament-area__inner-title">Результаты:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. АНТИМАГИЧЕСКИЙ ОРДЕН [↑↑]</li>
+									<li>2. ЛОХ-СОСТАВ [↓]li>
+									<li>3. ОТРЯД СТАЛКЕРОВ [↓]</li>
+									<li>4. ЛИГА ЭЛЬФОВ [•]</li>
+									<li>5. ДВОРФДАН [•]</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="tournament-area__inner tf1-6w" id="tf1-6w">
+							<h2 class="bold tournament-area__inner-title">1. Jackbox</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>HolYSP: 1, 4 места (4), 3 место (2), 3 место (3)</li>
+									<li>yobani_pomidorka: 2, 3, 4 места (4), 3 место (2)</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: 3 место (4), 3 место (3)</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 2 место (4), 1 место (2), 4, 4 места</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian: 1, 2 места (4), 1, 4 места (3), 2 место (2), 2, 3, 4 места</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. Dark Souls</h2>
+							Ответ: 41 смертей
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>HolYSP (**37**, ~~52~~) - 3 место</li>
+									<li>yobani_pomidorka (**37**, 50) - 1 место</li>
+									<li>arxitriklin (50, ~~70~~) - 6 место</li>
+									<li>yung_aalik (35, ~~60~~) - 4 место</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>chusui_uchiha (~~53~~)</li>
+									<li>yaleretayaeryl (~~27~~, **37**) - 3 место</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay (33, 50) - 2 место</li>
+								</ul>
+
+								<h3 class="semibold">ПАЛАДИНЫ</h3>
+								<ul>
+									<li>Metalfol (47, ~~75~~) - 4 место</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian (~~30~~, 51) - 7 место</li>
+									<li>AsterAc (~~21~~, 33) - 5 место</li>
+								</ul>
+
+								<h3 class="semibold">КУЛЬТ МЕРТВЫХ</h3>
+								<ul>
+									<li>Svaiat (~~30~~, 35) - 4 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. SiGame</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">ЛОХ-СОСТАВ</h3>
+								<ul>
+									<li>yobani_pomidorka: 2В</li>
+									<li>HolYSP: 1, 1 места (2)</li>
+								</ul>
+
+								<h3 class="semibold">АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
+								<ul>
+									<li>yaleretayaeryl: 3 место</li>
+								</ul>
+
+								<h3 class="semibold">ОТРЯД СТАЛКЕРОВ</h3>
+								<ul>
+									<li>mercenaryJulian: 3 место (2), 1, 3 места, 1В +пак</li>
+								</ul>
+
+								<h3 class="semibold">ЛИГА ЭЛЬФОВ</h3>
+								<ul>
+									<li>wateryay: 2, 2 места</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title final-bottom">4. Финал ТФ</h2>
+							<table class="tournament-area__inner-content-table">
+								<thead>
+									<tr>
+										<th>Место</th>
+										<th>Участник</th>
+										<th>Матч В-П-Н</th>
+										<th>Очки</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>ЛОХ-СОСТАВ</td>
+										<td>4-0-0</td>
+										<td>20</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>КУЛЬТ МЁРТВЫХ</td>
+										<td>3-1-0</td>
+										<td>18</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>АНТИМАГИЧЕСКИЙ ОРДЕН</td>
+										<td>2-2-0</td>
+										<td>14</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>ОТРЯД СТАЛКЕРОВ</td>
+										<td>1-3-0</td>
+										<td>13</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>ЛИГА ЭЛЬФОВ</td>
+										<td>0-4-0</td>
+										<td>7</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="final-table"><img src="images/final-table.png" alt=""></div>
+						</div>
+
+						<div class="tournament-area__inner tf1-rw" id="tf1-rw">
+
+							<h2 class="bold tournament-area__inner-title">Результаты:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. ЛОХ-СОСТАВ</li>
+									<li>2. АНТИМАГИЧЕСКИЙ ОРДЕН</li>
+									<li>3. ОТРЯД СТАЛКЕРОВ</li>
+								</ul>
+							</div>
+
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li><span class="bold bester">Лучший игрок ТФ№1:</span> yaleretayaeryl</li>
+									<li><span class="bold bester">Самый активный:</span> HolYSP</li>
+									<li><span class="bold bester">Лучший лидер:</span> yaleretayaeryl</li>
+									<li><span class="bold bester">Лучший джекбоксер:</span> mercenaryJulian</li>
+									<li><span class="bold bester">Лучший свояковец:</span> yaleretayaeryl</li>
+									<li><span class="bold bester">Лучший предсказатель:</span> chusui_uchiha</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">1. ЛОХ-СОСТАВ: 496</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">Финал ТФ +40</h3>
+								<ul>
+									<li>HolYSP +251</li>
+									<li>yobani_pomidorka +109</li>
+									<li>virrogand +27</li>
+									<li>malvina_ma +22</li>
+									<li>0living_person0 +18</li>
+									<li>yungaalik +11 </li>
+									<li>Mode_Of_God +8</li>
+									<li>arxitriklin +5</li>
+									<li>xxdreametxx +5</li>
+									<li>sergeypahom</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. АНТИМАГИЧЕСКИЙ ОРДЕН: 440</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">Финал ТФ +28</h3>
+								<ul>
+									<li>yaleretayaeryl +363</li>
+									<li>chusui_uchiha +49</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. ОТРЯД СТАЛКЕРОВ: 433</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">Финал ТФ +26</h3>
+								<ul>
+									<li>mercenaryJulian +351</li>
+									<li>AsterAc +56</li>
+									<li>senyach</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">4. ЛИГА ЭЛЬФОВ: 235</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">Финал ТФ +14</h3>
+								<ul>
+									<li>wateryay +221</li>
+									<li>vismutgames</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">5. ДВОРФДАН: 1905</h2>
+
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>fakeregem +190</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">6. КУЛЬТ МЕРТВЫХ: 170</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">Финал ТФ +36</h3>
+								<ul>
+									<li>Svaiat +113</li>
+									<li>j33Z +21</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">7. ЕДИНОЕ ЗЛО: 10</h2>
+
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>s0chn1k +10</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">8. ПАЛАДИНЫ: 7</h2>
+
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>Metalfol +7</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">9. АССАСИНЫ: 1</h2>
+
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>MrJames298 +1</li>
+									<li>mrBars1k_nya</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">10. ВЕЛИКАЯ ОРДА: 0</h2>
+
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>kunahare_tsun</li>
+								</ul>
+							</div>
+
+							<div class="tournament-area__inner-content">
+								<ul class="other-tf">
+									<li>АЛЬЯНС ЛЮДЕЙ</li>
+									<li>ГЕРОИ</li>
+									<li>ГРИМУАР ПЕЧАТИ</li>
+									<li>ФРОНТ ДРУИДОВ</li>
+								</ul>
+							</div>
+
+							<!-- </div> -->
+						</div>
+
+						<div class="tournament-area__inner tf2-1w" id="tf2-1w">
+							<h2 class="bold tournament-area__inner-title">1. Шифр</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+10 yaleretayaeryl</li>
+									<li>+5 Svaiat</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. Предсказания</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+8 ddefamationn</li>
+									<li>+8 maksmaksimmaks</li>
+									<li>+6 chusui_uchiha</li>
+									<li>+6 WaterYay</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. SiGame</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 2В</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>TollDwarf - 4 место</li>
+									<li>mercenaryJulian - 3, 4 места</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>mademyself__ - 1,1,2 места</li>
+									<li>WaterYay - 3 место, 1В</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>yaleretayaeryl - 2, 4 места</li>
+									<li>Buffoniwe1 - 1, 2 места</li>
+									<li>-10 Gevork</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">4. Jackbox</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+6 yobani_pomidorka - 1 место</li>
+									<li>+6 ddefamationn - 1, 2, 3 места</li>
+									<li>+2 chusui_uchiha - 2, 4 места</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>mercenaryJulian - 2, 2, 2 места</li>
+									<li>maksmaksimmaks - 3, 3, 3 места</li>
+
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>mademyself__ - 1, 4 места</li>
+									<li>WaterYay - 2 место</li>
+									<li>slohhh - 1, 2 места</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>Buffoniwe1 - 4 место</li>
+									<li>-10 Gevork - 4 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">5. Настолки</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+1 yobani_pomidorka - 2 место (соло)</li>
+									<li>+4 ddefamationn - 3 место (корова), 1 место (соло), 3 место (золото инков)</li>
+									<li>-10 chusui_uchiha</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>+1 mercenaryJulian - 2 место (золото инков)</li>
+									<li>+10 maksmaksimmaks - 3 место (золото инков)</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>mademyself__ - 4 место (соло)</li>
+									<li>+7 WaterYay</li>
+									<li>+2 slohhh</li>
+									<li>AsterAc - 2 место (корова)</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>yaleretayaeryl - 1 место (корова)</li>
+									<li>+3 Gevork - 1 место (золото инков)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">6. Мини-игры</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+7 yobani_pomidorka</li>
+									<li>+30 ddefamationn</li>
+									<li>+6 chusui_uchiha</li>
+									<li>+3 J33Z</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>+20 mercenaryJulian</li>
+									<li>+13 maksmaksimmaks</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>+19 mademyself__</li>
+									<li>+31 WaterYay</li>
+									<li>+10 slohhh</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>+4 Mode_Of_God</li>
+									<li>+13 Buffoniwe1</li>
+									<li>+8 Gevork</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">РЕЗУЛЬТАТЫ:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. УКРЫТИЕ ТЕНИ</li>
+									<li>2. СЕРДЦЕ НЕКРОМАНТИИ</li>
+									<li>3. АВАНТЮРИСТЫ</li>
+									<li>4. ШТУРМ ФОРС</li>
+								</ul>
+								<span class="underline semibold">лучший игрок: ddefamationn</span>
+							</div>
+
+						</div>
+
+						<div class="tournament-area__inner tf2-2w" id="tf2-2w">
+							<h2 class="bold tournament-area__inner-title">1. Шифр</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+8 ddefamationn</li>
+									<li>+8 yobani_pomidorka</li>
+									<li>+8 HolYSP</li>
+									<li>+8 WaterYay</li>
+									<li>+8 J33Z</li>
+									<li>+8 YungAaalik</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. Предсказания</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+25 J33Z</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. Jackbox</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+3 yobani_pomidorka - 2 место (2), 4 место</li>
+									<li>-5 ddefamationn - 1, 2 места</li>
+									<li>chusui_uchiha - 3 место</li>
+									<li>J33Z - 1 место (2), 1 место</li>
+									<li>riffiiii - 2 место</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>+6 mercenaryJulian - 3 место (2), 1, 1, 1, 2, 2, 2, 2, 4 места</li>
+									<li>maksmaksimmaks - 3, 4 места</li>
+									<li>+26 HolYSP - 1, 1, 3 места</li>
+									<li>+4 LordSanch1o1 - 3 место</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>+6 WaterYay - 1, 2, 3, 3 места </li>
+									<li>+3 slohhh</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>+2 NEDRYG_lONOR - 4 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">4. SiGame</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+6 yobani_pomidorka - 1В</li>
+									<li>ddefamationn - 2 место</li>
+									<li>+10 J33Z - 3 место</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>mercenaryJulian - 2, 2, 3 места</li>
+									<li>+10 fakeregem - 1,1,1 места</li>
+									<li>HolYSP - 1 место, 2В</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>WaterYay - 3 место, 1 В</li>
+									<li>mademyself - 4 место</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>yaleretayaeryl - 4 место</li>
+									<li>Buffoniwe1 - 2 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">5. Мини-игры</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+8 yobani_pomidorka</li>
+									<li>+25 ddefamationn</li>
+									<li>+4 chusui_uchiha</li>
+									<li>+28 J33Z</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>+6 mercenaryJulian</li>
+									<li>+10 maksmaksimmaks</li>
+									<li>+16 LordSanch1o1</li>
+									<li>+29 HolYSP</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>+12 WaterYay</li>
+									<li>+4 AsterAc</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>+2 Mode_Of_God</li>
+									<li>+4 Buffoniwe1</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">РЕЗУЛЬТАТЫ:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. АВАНТЮРИСТЫ [↑↑]</li>
+									<li>2. СЕРДЦЕ НЕКРОМАНТИИ [•]</li>
+									<li>3. УКРЫТИЕ ТЕНИ [↓↓]</li>
+									<li>4. ШТУРМ ФОРС [•]</li>
+								</ul>
+								<span class="underline semibold">лучший игрок: mercenaryJulian</span>
+							</div>
+
+						</div>
+
+						<div class="tournament-area__inner tf2-3w" id="tf2-3w">
+							<h2 class="bold tournament-area__inner-title">1. Шифр</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+20 HolYSP</li>
+									<li>+15 yobani_pomidorka</li>
+									<li>+10 ddefamationn</li>
+									<li>+1 mademyself</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. Предсказания</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+20 mercenaryJulian</li>
+									<li>+15 HolYSP</li>
+									<li>+15 maksmaksimmaks</li>
+									<li>+10 ddefamationn</li>
+									<li>+5 yobani_pomidorka</li>
+									<li>+5 WaterYay</li>
+									<li>+5 chusui_uchiha</li>
+									<li>+5 mademyself</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. Jackbox</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 1, 2 места</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>mercenaryJulian - 2, 2 места (2), 1, 3 места, 2 место (3)</li>
+									<li>LordSanch1o1 - 1 место</li>
+									<li>HolYSP - 3, 3 места (2), 2, 2, 3, 4 места</li>
+									<li>fakeregem - 2 место</li>
+									<li>evfks - 1, 1 места</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>mademyself - 2, 3, 3 места</li>
+									<li>WaterYay - 1 место (2), 1, 2, 4 места, 3 место (3)</li>
+									<li>AsterAc - 4 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">4. Мини-игры</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+4 yobani_pomidorka</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>+6 mercenaryJulian</li>
+									<li>+2 LordSanch1o1</li>
+									<li>+6 HolYSP</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>+4 mademyself</li>
+									<li>+2 WaterYay</li>
+									<li>+8 AsterAc</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>+6 Buffoniwe1</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">5. SiGame</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 4 место, 1В</li>
+									<li>J33Z - 4 место</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>HolYSP - 2, 3 места</li>
+									<li>fakeregem - 1, 1 места</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>mademyself - 2, 3 места</li>
+									<li>WaterYay - 1В + пак</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">6. Настолки</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 2 место</li>
+									<li>+15 J33Z - 1 место</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>maksmaksimmaks - 3 место (2)</li>
+									<li>+4 fakeregem</li>
+									<li>+14 HolYSP - 1 место (2)</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>+4 mademyself - 4 место</li>
+									<li>+12 WaterYay - 3 место, 2 место (2)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">7. Брось мне вызов</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+1 yobani_pomidorka - [1-2] (Brawlhalla)</li>
+									<li>J33Z - [2-0] (CS:GO: 16/8, 16/9)</li>
+									<li>+1 chusui_uchiha - [0-1] (Шашки)</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>mercenaryJulian - [1-0] (Шахматы)</li>
+									<li>+1 maksmaksimmaks - [0-1] (Шашки)</li>
+									<li>+10 fakeregem - [1-1] (Шахматы)</li>
+									<li>+1 HolYSP - [0-2] (Dota 2: SF, Pudge)</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>mademyself - [2-0] (osu!)</li>
+									<li>+1 WaterYay - [1-2] (osu!)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">РЕЗУЛЬТАТЫ:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. АВАНТЮРИСТЫ [•]</li>
+									<li>2. СЕРДЦЕ НЕКРОМАНТИИ [•]</li>
+									<li>3. УКРЫТИЕ ТЕНИ [•]</li>
+									<li>4. ШТУРМ ФОРС [•]</li>
+								</ul>
+								<span class="underline semibold">лучший игрок: HolYSP</span>
+							</div>
+
+						</div>
+
+						<div class="tournament-area__inner tf2-4w" id="tf2-4w">
+							<h2 class="bold tournament-area__inner-title">1. Шифр</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+15 chusui_uchiha</li>
+									<li>+10 HolYSP</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. Предсказания</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+14 mercenaryJulian</li>
+									<li>+14 HolYSP</li>
+									<li>+14 maksmaksimmaks</li>
+									<li>+12 WaterYay</li>
+									<li>+10 yobani_pomidorka</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. Jackbox</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 4 место</li>
+									<li>J33Z - 1, 2, 3 места, 3 место (2)</li>
+									<li>owleren - 1, 3, 4 места</li>
+									<li>chusui_uchiha - 2, 2 места</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>mercenaryJulian - 1 место</li>
+									<li>HolYSP - 1, 1, 1, 3, 4 места</li>
+									<li>redi_x_ - 3, 4 места</li>
+									<li>evfks - 2 место, 1 место (2)</li>
+									<li>maksmaksimmaks - 1, 3, 3 места</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>WaterYay - 3, 4, 4 места</li>
+									<li>FrayZTV1 - 1, 2, 3, 3 места</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>sonlc_games - 2, 2 места</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">4. Мини-игры</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+6 chusui_uchiha</li>
+									<li>+12 J33Z</li>
+									<li>+6 owleren</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>+6 mercenaryJulian</li>
+									<li>+8 HolYSP</li>
+									<li>+4 evfks</li>
+									<li>+2 redi_x_</li>
+									<li>+2 maksmaksimmaks</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>+2 WaterYay</li>
+									<li>+4 AsterAc</li>
+									<li>+8 FrayZTV1</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>+8 sonlc_games</li>
+									<li>+2 Mode_Of_God</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">5. Угадай мелодию</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>J33Z - 4 ответа</li>
+									<li>owleren - 3 ответа</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>mercenaryJulian - 1 ответ</li>
+									<li>HolYSP - 17 ответов</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>WaterYay - 3 ответа</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>Mode_Of_God - 4 ответа</li>
+									<li>yaleretayaeryl - 6 ответов</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">6. Настолки</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 3, 4 места</li>
+									<li>J33Z - 1 место</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>mercenaryJulian - 2, 3 места</li>
+									<li>HolYSP - 1 место (2)</li>
+									<li>maksmaksimmaks - 1 место, 2 место (2)</li>
+									<li>LordSanch1o1 - 2 место</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>WaterYay - 4 место, 3 место (2)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">7. SiGame</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 1В</li>
+									<li>J33Z - 1В</li>
+									<li>owleren - 3 место, 1В</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>mercenaryJulian - 2 место</li>
+									<li>HolYSP - 1, 2 места</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>WaterYay - 3, 3 места</li>
+									<li>mademyself - 1 место</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>yaleretayaeryl - 4 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">РЕЗУЛЬТАТЫ:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. АВАНТЮРИСТЫ [•]</li>
+									<li>2. СЕРДЦЕ НЕКРОМАНТИИ [•]</li>
+									<li>3. УКРЫТИЕ ТЕНИ [•]</li>
+									<li>4. ШТУРМ ФОРС [•]</li>
+								</ul>
+								<span class="underline semibold">лучший игрок: HolYSP</span>
+							</div>
+						</div>
+
+						<div class="tournament-area__inner tf2-5w" id="tf2-5w">
+							<h2 class="bold tournament-area__inner-title">1. Шифр</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+15 yobani_pomidorka</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. Предсказания</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+25 WaterYay</li>
+									<li>+20 HolYSP</li>
+									<li>+20 chusui_uchiha</li>
+									<li>+20 mercenaryJulian</li>
+									<li>+15 yobani_pomidorka</li>
+									<li>+15 maksmaksimmaks</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. Квесты</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+15 mercenaryJulian</li>
+									<li>+15 HolYSP</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">4. Jackbox</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 3 место</li>
+									<li>owleren - 2, 4 места (2)</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>mercenaryJulian - 1, 3 места (4), 1 место (2), 2, 3 места (3)</li>
+									<li>HolYSP - 1, 1 места (3), 2, 3, 4 места (2), 1, 3 места (4)</li>
+									<li>maksmaksimmaks - 1, 2 места (3), 2, 4 места (2)</li>
+									<li>LordSanch1o1 - 2 место (4)</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>WaterYay - 3, 3 места (2), 2, 2 места</li>
+									<li>slohhh - 1 место (2), 1 место (4)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">5. Мини-игры</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+2 yobani_pomidorka</li>
+									<li>+2 chusui_uchiha</li>
+									<li>+4 owleren</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>+8 HolYSP</li>
+									<li>+4 maksmaksimmaks</li>
+									<li>+4 LordSanch1o1</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>+8 WaterYay</li>
+									<li>+4 AsterAc</li>
+									<li>+4 slohhh</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>+2 Buffoniwe1</li>
+									<li>+2 Mode_Of_God</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">6. Данетки, ANIMALS, Угадай мелодию, Настолки</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+14 chusui_uchiha</li>
+									<li>+21 owleren - 3 место</li>
+									<li>+15 J33Z</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>+28 mercenaryJulian - 3, 3 места</li>
+									<li>+23 HolYSP</li>
+									<li>+10 maksmaksimmaks - 1, 2 места</li>
+									<li>+5 LordSanch1o1</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>+24 WaterYay - 1, 1, 2 места</li>
+									<li>slohhh - 2 место</li>
+									<li>+10 YungAaalik</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>+3 Buffoniwe1</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">7. SiGame</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 1,5 В</li>
+									<li>J33Z - 1В</li>
+									<li>owleren - 1Ф</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>HolYSP - 1, 3 места, 2 место (3)</li>
+									<li>fakeregem - 2 место, 1 место (3)</li>
+									<li>LordSanch1o1 - 0,5В</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>WaterYay - 2 место</li>
+									<li>mademyself - 1, 3 места</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">РЕЗУЛЬТАТЫ:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. АВАНТЮРИСТЫ [•]</li>
+									<li>2. СЕРДЦЕ НЕКРОМАНТИИ [•]</li>
+									<li>3. УКРЫТИЕ ТЕНИ [•]</li>
+									<li>4. ШТУРМ ФОРС [•]</li>
+								</ul>
+								<span class="underline semibold">лучший игрок: HolYSP</span>
+							</div>
+
+						</div>
+
+						<div class="tournament-area__inner tf2-6w" id="tf2-6w">
+							<h2 class="bold tournament-area__inner-title">1. Предсказания</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>+10 mercenaryJulian</li>
+									<li>+10 yobani_pomidorka</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. SiGame</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 1В</li>
+									<li>-10 owleren</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>HolYSP - 1В</li>
+									<li>fakeregem - 1, 1 места</li>
+									<li>maksmaksimmaks - 2 место</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>WaterYay - 3 место</li>
+									<li>mademyself - 1 место</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. Jackbox</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 3 место (2)</li>
+									<li>chusui_uchiha - 1 место (2)</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>+6 mercenaryJulian - 1, 1 места, 2 место (3), 2 место (2)</li>
+									<li>HolYSP - 2 место</li>
+									<li>+4 maksmaksimmaks - 1, 4 места (2)</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>+3 WaterYay - 3, 3 места, 3 место (3), 4 место (2)</li>
+									<li>slohhh - 2 место</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>NEDRYG_lONOR - 1 место (3)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">4. Сурвайв</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>+4 yobani_pomidorka</li>
+									<li>+2 chusui_uchiha</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>+6 mercenaryJulian</li>
+									<li>+2 maksmaksimmaks</li>
+								</ul>
+
+								<h3 class="semibold">УКРЫТИЕ ТЕНИ</h3>
+								<ul>
+									<li>+4 WaterYay</li>
+									<li>+2 mademyself</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">5. Настолки</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">СЕРДЦЕ НЕКРОМАНТИИ</h3>
+								<ul>
+									<li>yobani_pomidorka - 2 место, 3 место (3)</li>
+								</ul>
+
+								<h3 class="semibold">АВАНТЮРИСТЫ</h3>
+								<ul>
+									<li>evfks - 3 место, 3 место (2)</li>
+								</ul>
+
+								<h3 class="semibold">ШТУРМ ФОРС</h3>
+								<ul>
+									<li>NEDRYG_lONOR - 3 место, 2 место (3), 1 место (2)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">6. ВЫЗОВ-ТУРНИР: ФИНАЛ ТФ-2</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. mademyself</li>
+									<li>2. yobani_pomidorka</li>
+									<li>3. chusui_uchiha</li>
+								</ul>
+								<div class="final-table-2"><img src="images/final-table-2.jpg" alt=""></div>
+							</div>
+
+						</div>
+
+						<div class="tournament-area__inner tf2-rw" id="tf2-rw">
+
+							<h2 class="bold tournament-area__inner-title">Результаты:</h2>
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li>1. АВАНТЮРИСТЫ</li>
+									<li>2. СЕРДЦЕ НЕКРОМАНТИИ</li>
+								</ul>
+							</div>
+
+							<div class="tournament-area__inner-content">
+								<ul>
+									<li><span class="bold bester">Лучшие в шифрах:</span> HolYSP & yobani_pomidorka (+11)</li>
+									<li><span class="bold bester">Лучший в The Jackbox:</span> mercenaryJulian (+15)</li>
+									<li><span class="bold bester">Лучший в SIGame:</span> HolYSP (+15)</li>
+									<li><span class="bold bester">Лучшая в Настольных играх:</span> WaterYay (+15)</li>
+									<li><span class="bold bester">Лучшая в Мини-играх:</span> ddefamationn (+15)</li>
+									<li><span class="bold bester">Лучший предсказатель:</span> mercenaryJulian (+15)</li>
+									<li><span class="bold bester">Лучший игрок:</span> HolYSP (+20)</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">1. АВАНТЮРИСТЫ: 1519</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">Финал ТФ +40</h3>
+								<ul>
+									<li>Финал ТФ +0</li>
+									<li>+557 HolYSP</li>
+									<li>+499 mercenaryJulian</li>
+									<li>+198 maksmaksimmaks</li>
+									<li>+147 fakeregem</li>
+									<li>+59 LordSanch1o1</li>
+									<li>+48 evfks</li>
+									<li>+11 redi`_x_`</li>
+									<li>felikahug</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">2. СЕРДЦЕ НЕКРОМАНТИИ: 1039</h2>
+
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">Финал ТФ +28</h3>
+								<ul>
+									<li>Финал ТФ +130</li>
+									<li>+348 yobani_pomidorka</li>
+									<li>+242 J33Z</li>
+									<li>+184 ddefamationn</li>
+									<li>+178 chusui_uchiha</li>
+									<li>+74 owleren</li>
+									<li>+8 riffiiii</li>
+									<li>+5 Svaiat</li>
+									<li>arxitriklin</li>
+									<li>scorpinex2019</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">3. УКРЫТИЕ ТЕНИ: 932</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">Финал ТФ +26</h3>
+								<ul>
+									<li>Финал ТФ +120</li>
+									<li>+450 WaterYay</li>
+									<li>+329 mademyself</li>
+									<li>+67 slohhh</li>
+									<li>+36 FrayZTV1</li>
+									<li>+32 AsterAc</li>
+									<li>+18 YungAaalik</li>
+									<li>marakayse</li>
+									<li>don ballon</li>
+									<li>dyavolst</li>
+								</ul>
+							</div>
+
+							<h2 class="bold tournament-area__inner-title">4. ШТУРМ ФОРС: 217</h2>
+							<div class="tournament-area__inner-content">
+								<h3 class="semibold">Финал ТФ +14</h3>
+								<ul>
+									<li>Финал ТФ +0</li>
+									<li>+68 Buffoniwe1</li>
+									<li>+67 yaleretayaeryl</li>
+									<li>+31 NEDRYG_lONOR</li>
+									<li>+24 sonlc_games</li>
+									<li>+22 Mode_Of_God</li>
+									<li>+5 Gevork</li>
+									<li>xxdreametxx</li>
+									<li>senyach</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="dotane-board">
+				<div class="container">
+					<h1 class="title">Досочки первых донатеров</h1>
+					<div class="slider-donate">
+						<div class="slider-donate__item">
+							<img class="slider-donate__item-image" src="images/slider-donate/donate-slide-1.webp" alt="slider-donate">
+						</div>
+						<div class="slider-donate__item">
+							<img class="slider-donate__item-image" src="images/slider-donate/donate-slide-2.webp" alt="slider-donate">
+						</div>
+						<div class="slider-donate__item">
+							<img class="slider-donate__item-image" src="images/slider-donate/donate-slide-3.webp" alt="slider-donate">
+						</div>
+						<div class="slider-donate__item">
+							<img class="slider-donate__item-image" src="images/slider-donate/donate-slide-2.webp" alt="slider-donate">
+						</div>
+						<div class="slider-donate__item">
+							<img class="slider-donate__item-image" src="images/slider-donate/donate-slide-2.webp" alt="slider-donate">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- popup -->
+			<div class="overlay js-overlay-campaign">
+				<div class="popup js-popup-campaign">
+					<p>К сожалению, на данный момент запрашиваемая функция не работает.</p>
+					<p>В скором времени она станет доступной!</p>
+					<div class="popup__clouse js-close-campaign"></div>
+				</div>
+			</div>
+
+			<!-- popup -->
+		</main>
+
+		<footer class="footer">
+			<div class="footer__inner">
+				<span class="footer__name">GODofDANGO</span>
+				<div class="footer__social-links">
+					<a class="footer__social-link" href="https://www.twitch.tv/godofdango" target="blank">
+						<img class="footer__social-image" src="images/twitch.svg" alt="twich">
+					</a>
+					<a class="footer__social-link" href="https://www.youtube.com/godofdango" target="blank">
+						<img class="footer__social-image" src="images/youtube.svg" alt="youtube">
+					</a>
+					<a class="footer__social-link" href="https://vk.com/godofdango" target="blank">
+						<img class="footer__social-image" src="images/vk.svg" alt="vk">
+					</a>
+					<a class="footer__social-link" href="https://www.instagram.com/evgendango/" target="blank">
+						<img class="footer__social-image" src="images/inst.svg" alt="instagram">
+					</a>
+					<a class="footer__social-link" href="https://discord.com/invite/cgMPuCz" target="blank">
+						<img class="footer__social-image" src="images/discord.svg" alt="discord">
+					</a>
+				</div>
+				<div class="footer__bottom">
+					<span class="footer__copy">© 2020 все права защищены</span>
+					<div class="footer__autor-name">
+						<span>Сайт разработал:</span>
+						<a class="footer__autor-link" href="https://vk.com/aisa000511" target="blank">
+							ISA
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

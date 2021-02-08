@@ -1,0 +1,56 @@
+.levelup-wrapper {
+	background-color: $grey-light;
+}
+
+.levelup-items {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	padding-bottom: 42px;
+	max-width: 650px;
+}
+
+.levelup-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.levelup-item__number {
+	color: $grey-dark;
+	font-size: 118px;
+	width: 70px;
+}
+
+.levelup-item__discr {
+	display: block;
+	max-width: 310px;
+	height: 150px;
+	background-color: $grey-dark;
+	border-radius: 40px;
+	text-align: center;
+	padding: 30px;
+	box-shadow: 20px 20px 40px 0px rgba(82, 82, 82, 0.2);
+}
+
+.circle {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: $pink;
+	position: relative;
+}
+
+.circle-line {
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 2px;
+		height: 370px;
+		background-color: $pink;
+	}
+}

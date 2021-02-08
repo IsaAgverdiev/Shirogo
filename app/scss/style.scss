@@ -1,0 +1,34 @@
+// Шрифты
+@import '_fonts.scss';
+// Библиотеки
+@import '_libs.scss';
+// Медиа переменные
+@import '_vars.scss';
+// Глобальные стили
+@import '_global.scss';
+// Медиа запросы
+@import '_media.scss';
+
+// header
+@import './blocks/header.scss';
+// footer
+@import './blocks/footer.scss';
+
+// main
+@import './blocks/main/minecraft.scss';
+@import './blocks/main/tyan-bots.scss';
+@import './blocks/main/levelup.scss';
+@import './blocks/main/donate.scss';
+
+// main
+@import './blocks/butik/services.scss';
+@import './blocks/butik/level-table.scss';
+
+// room
+@import './blocks/room/information.scss';
+@import './blocks/room/dotane-board.scss';
+@import './blocks/room/dotane-board.scss';
+@import './blocks/room/tournament.scss';
+
+// manga
+@import './blocks/manga/manga.scss';

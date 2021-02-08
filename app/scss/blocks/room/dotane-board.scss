@@ -1,0 +1,20 @@
+.slider-donate {
+	overflow: hidden;
+	margin: 0 auto 50px;
+	position: relative;
+	width: 55%;
+	border-radius: 10px;
+}
+
+.slider-donate__item {
+	cursor: pointer;
+	width: 100%;
+	height: 1100px;
+
+	img {
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		object-fit: cover;
+	}
+}

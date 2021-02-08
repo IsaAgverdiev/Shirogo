@@ -1,0 +1,30 @@
+.bots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $blue;
+	font-size: 16px;
+	line-height: 20px;
+	padding-bottom: 60px;
+}
+
+.bots-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: $grey-light;
+	border-radius: 40px;
+	width: 400px;
+	height: 600px;
+	padding: 30px 40px;
+	box-shadow: 20px 20px 40px 0px rgba(82, 82, 82, 0.2);
+
+	&:nth-child(1) {
+		margin-right: 100px;
+	}
+}
+
+.bots-item__body-title {
+	margin-top: 20px;
+}

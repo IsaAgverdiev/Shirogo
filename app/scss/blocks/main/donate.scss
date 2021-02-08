@@ -1,0 +1,23 @@
+.counter-area {
+	border: 1px solid $grey-light;
+	overflow: auto;
+	color: $grey-dark;
+	margin: 0 auto 50px;
+	width: 55%;
+	height: 600px;
+	box-shadow: 4px 4px 10px 0px rgba(82, 82, 82, 0.2);
+
+	ol {
+		padding-left: 10px;
+		counter-reset: num;
+	}
+
+	li {
+		&::before {
+			content: counter(num) ".";
+			counter-increment: num;
+			color: $pink;
+			padding-right: 15px;
+		}
+	}
+}

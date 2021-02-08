@@ -1,0 +1,78 @@
+.information-menu {
+	margin: 0 0 30px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__item {
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
+		border-radius: 15px;
+		background-color: $grey-light;
+		padding: 0;
+		width: 150px;
+		height: 60px;
+		font-size: 16px;
+
+		&:focus {
+			background-color: $pink-light;
+			color: #fff;
+		}
+	}
+}
+
+.information-menu__item+.information-menu__item {
+	margin-left: 30px;
+}
+
+// TODO
+.form-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// TODO
+
+.area {
+	border: 1px solid $grey-light;
+	overflow: auto;
+	color: $grey-dark;
+	margin: 0 auto;
+	padding-top: 15px;
+	width: 55%;
+	height: 600px;
+	box-shadow: 4px 4px 10px 0px rgba(82, 82, 82, 0.15);
+	text-align: center;
+
+	h2 {
+		font-size: 16px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0px 0px 15px 20px;
+	}
+
+	li {
+		padding: 0;
+		text-align: left;
+		line-height: 32px;
+	}
+
+	.music-area {
+
+		h2 {
+			text-align: left;
+			margin-left: 20px;
+		}
+
+		&__title {
+			display: block;
+			font-size: 14px;
+			padding-left: 15px;
+			text-align: left;
+		}
+	}
+}

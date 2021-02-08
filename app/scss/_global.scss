@@ -1,0 +1,187 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Comfortaa';
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: #ffffff;
+	margin: 0;
+	height: 100%;
+}
+
+.title {
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	color: #525252;
+	padding-top: 50px;
+	padding-bottom: 40px;
+	text-align: center;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+input {
+	margin: 0;
+}
+
+a,
+li {
+	text-decoration: none;
+	list-style-type: none;
+}
+
+a:visited {
+	color: inherit;
+}
+
+a:link {
+	color: inherit;
+}
+
+button,
+button:active,
+button:focus {
+	outline: none;
+	border: none;
+	font-family: 'Comfortaa';
+}
+// Прижатие футера
+.footer-down {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+.footer {
+	margin-top: auto;
+}
+// Прижатие футера
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+// текста
+.navy-text {
+	color: #15499f;
+}
+
+.red-text {
+	color: #c31f5c;
+}
+
+.pink-text{
+	color: #BA6689;
+}
+// текста
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(82, 82, 82, 0.7);
+	display: none;
+	z-index: 1000;
+}
+
+// Модальное окно
+.popup {
+	position: absolute;
+	width: 400px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px 50px 10px 30px;
+	background-color: $grey-light;
+	color: $grey-dark;
+	font-weight: normal;
+	line-height: 24px;
+	border-radius: 20px;
+}
+
+
+.popup__clouse {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 23px;
+	height: 23px;
+	cursor: pointer;
+
+	&:before {
+		content: "";
+		background-color: $pink;
+		position: absolute;
+		width: 31px;
+		height: 1px;
+		top: 11px;
+		left: -5px;
+		transform: rotate(-45deg);
+	}
+
+	&:after {
+		content: "";
+		background-color: $pink;
+		position: absolute;
+		width: 31px;
+		height: 1px;
+		top: 11px;
+		left: -5px;
+		transform: rotate(-45deg);
+		transform: rotate(45deg);
+	}
+}
+// Модальное окно
+
+.hide {
+	display: none;
+}
+
+.offscroll{
+	overflow: hidden;
+	padding-left: 17px;
+
+}
+.onscroll {
+	overflow: auto;
+	padding-left: 0px;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.bold{
+	font-weight: 700;
+	color: black;
+}
+
+.semibold{
+	font-weight: 600;
+}
+
+.underline {
+	text-decoration: underline;
+}

@@ -1,0 +1,160 @@
+.tournament__header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+
+	select {
+		min-width: 300px;
+		padding: 5px 10px;
+		outline: none;
+		box-shadow: none;
+		border: 1px solid $grey-dark;
+		font-family: 'Raleway';
+	}
+
+	>select {
+		&:first-child {
+			margin-right: 50px;
+		}
+	}
+}
+
+.tournament__select-list {
+	select {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
+	}
+}
+
+.tournament-area {
+	border: 1px solid $grey-light;
+	overflow: auto;
+	color: $grey-dark;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	width: 55%;
+	max-height: 600px;
+	box-shadow: 4px 4px 10px 0px rgba(82, 82, 82, 0.15);
+
+	&__inner {
+		margin-left: 20px;
+
+		.final-bottom {
+			padding-bottom: 15px;
+		}
+
+		.final-table,
+		.final-table-2 {
+			display: flex;
+			justify-content: center;
+			object-fit: cover;
+
+			img {
+				width: 90%;
+				margin-top: 15px;
+			}
+		}
+
+		.final-table-2 {
+			justify-content: flex-start;
+		}
+
+		.other-tf {
+			margin-top: 15px;
+		}
+
+		.bester {
+			padding-top: 5px;
+		}
+
+		.non-left {
+			display: block;
+			margin-left: -25px;
+			margin-top: 15px;
+		}
+
+		ul {
+			padding-left: 0px;
+			margin-top: 5px;
+			margin-bottom: 0px;
+			font-size: 15px;
+		}
+
+		li {
+			padding-bottom: 5px;
+		}
+
+		h2 {
+			padding-top: 20px;
+		}
+
+		h3 {
+			padding-top: 15px;
+			padding-bottom: 0px;
+		}
+
+		.death42 {
+			padding-top: 0px;
+		}
+	}
+}
+
+// first selected
+.tournament-area__inner:not(:first-child) {
+	display: none;
+}
+
+.tf2 {
+	display: none;
+}
+
+
+
+.tournament-area__inner-title {
+	color: $pink;
+}
+
+.tournament-area__inner-content {
+	padding-left: 25px;
+}
+
+.tournament-area__inner-content-table {
+	padding-bottom: 15px;
+	margin: 0;
+	border-collapse: collapse;
+	margin: 0 auto;
+
+	tbody {
+		tr {
+			&:nth-child(odd) {
+				background-color: $grey-light;
+			}
+		}
+	}
+
+	tr {
+		&:first-child {
+			background-color: silver;
+		}
+	}
+
+	td {
+		border-right: 1px solid $grey-dark;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+
+	th {
+		border-right: 1px solid $grey-dark;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
