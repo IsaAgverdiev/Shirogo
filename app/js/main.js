@@ -24,6 +24,7 @@ $(document).ready(function () {
 	$('.slider-donate').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
+		fade: true,
 	});
 	//  **slider-manga
 
@@ -90,6 +91,7 @@ $(document).ready(function () {
 	var filter_select_weeks = document.getElementById('tournament__header-week');
 
 	filter_select_month.onchange = function () {
+
 		var filter_select = filter_select_weeks.getElementsByClassName('tournament__select-week');
 		for (var i = 0; i < filter_select.length; i++) {
 			if (filter_select[i].classList.contains(this.value)) {
@@ -99,16 +101,19 @@ $(document).ready(function () {
 			}
 		}
 	};
+
 	//	select numder TF
 
 	//	select week
 	var filter_select_week = document.getElementById('js-select-week');
 	var filter_select_week2 = document.getElementById('js-select-week2');
 	var items_week = document.getElementById('tournament-area');
+	var items = document.getElementsByClassName('tournament-area__inner');
+	var tournamentArea1 = document.getElementById('tournament-area-tf1');
+	var tournamentArea2 = document.getElementById('tournament-area-tf2');
 
 
 	filter_select_week.onchange = function () {
-		var items = items_week.getElementsByClassName('tournament-area__inner');
 		for (var i = 0; i < items.length; i++) {
 			if (items[i].classList.contains(this.value)) {
 				items[i].style.display = 'block';
@@ -120,7 +125,6 @@ $(document).ready(function () {
 	};
 
 	filter_select_week2.onchange = function () {
-		var items = items_week.getElementsByClassName('tournament-area__inner');
 		for (var i = 0; i < items.length; i++) {
 			if (items[i].classList.contains(this.value)) {
 				items[i].style.display = 'block';
@@ -130,7 +134,8 @@ $(document).ready(function () {
 			}
 		}
 	};
-	// **tournament fract
+
+// **tournament fract
 
 	// Модальное окно
 
