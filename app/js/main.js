@@ -95,7 +95,7 @@ $(document).ready(function () {
 		var filter_select = filter_select_weeks.getElementsByClassName('tournament__select-week');
 		for (var i = 0; i < filter_select.length; i++) {
 			if (filter_select[i].classList.contains(this.value)) {
-				filter_select[i].style.display = 'block';
+				filter_select[i]
 			} else {
 				filter_select[i].style.display = 'none';
 			}
@@ -134,35 +134,19 @@ $(document).ready(function () {
 			}
 		}
 	};
+	// **tournament fract
 
-// **tournament fract
-
-	// Модальное окно
-
+	// **Модальное окно
 	// открыть по кнопке
-	$('.js-user-btn').click(function () {
 
-		$('.js-overlay-campaign').fadeIn(0);
-		$('.js-overlay-campaign').addClass('hide');
-		window.onscroll = function () { window.scrollTo(0, 0); };
-	});
-
-	// закрыть на крестик
-	$('.js-close-campaign').click(function () {
-		$('.js-overlay-campaign').fadeOut(0);
-		window.onscroll = function () { window.scrollTo(auto, auto); }
-	});
-
-
-	// закрыть по клику вне окна
-	$(document).mouseup(function (e) {
-		var popup = $('.js-popup-campaign');
-		if (e.target != popup[0] && popup.has(e.target).length === 0) {
-			$('.js-overlay-campaign').fadeOut(0);
-			window.onscroll = function () { window.scrollTo(auto, auto); }
-		}
-	});
+	let btn = document.getElementsByClassName('js-user-btn');
+	let overlay = document.getElementsByClassName('js-overlay-campaign');
+	
+		btn.onclick = function () {
+			overlay.toggleClass('.active');
+		};
 
 });
+	// **Модальное окно
 
 

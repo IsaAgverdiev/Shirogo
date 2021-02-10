@@ -15,6 +15,7 @@ body {
 	line-height: 22px;
 	color: #ffffff;
 	margin: 0;
+	padding: 0;
 	height: 100%;
 }
 
@@ -64,15 +65,18 @@ button:focus {
 	border: none;
 	font-family: 'Comfortaa';
 }
+
 // Прижатие футера
 .footer-down {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 }
+
 .footer {
 	margin-top: auto;
 }
+
 // Прижатие футера
 
 .container {
@@ -90,9 +94,10 @@ button:focus {
 	color: #c31f5c;
 }
 
-.pink-text{
+.pink-text {
 	color: #BA6689;
 }
+
 // текста
 
 .overlay {
@@ -102,8 +107,8 @@ button:focus {
 	top: 0;
 	left: 0;
 	background-color: rgba(82, 82, 82, 0.7);
-	display: none;
 	z-index: 1000;
+	display: none;
 }
 
 // Модальное окно
@@ -119,66 +124,72 @@ button:focus {
 	font-weight: normal;
 	line-height: 24px;
 	border-radius: 20px;
+
+	&__clouse {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		width: 23px;
+		height: 23px;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			background-color: $pink;
+			position: absolute;
+			width: 31px;
+			height: 1px;
+			top: 11px;
+			left: -5px;
+			transform: rotate(-45deg);
+		}
+
+		&::after {
+			content: "";
+			background-color: $pink;
+			position: absolute;
+			width: 31px;
+			height: 1px;
+			top: 11px;
+			left: -5px;
+			transform: rotate(-45deg);
+			transform: rotate(45deg);
+		}
+	}
 }
 
 
-.popup__clouse {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	width: 23px;
-	height: 23px;
-	cursor: pointer;
-
-	&:before {
-		content: "";
-		background-color: $pink;
-		position: absolute;
-		width: 31px;
-		height: 1px;
-		top: 11px;
-		left: -5px;
-		transform: rotate(-45deg);
-	}
-
-	&:after {
-		content: "";
-		background-color: $pink;
-		position: absolute;
-		width: 31px;
-		height: 1px;
-		top: 11px;
-		left: -5px;
-		transform: rotate(-45deg);
-		transform: rotate(45deg);
-	}
-}
 // Модальное окно
 
 .hide {
 	display: none;
 }
 
-.offscroll{
+.active {
+	display: block;
+}
+
+.offscroll {
 	overflow: hidden;
 	padding-left: 17px;
 
 }
+
 .onscroll {
 	overflow: auto;
 	padding-left: 0px;
 }
 
-.pointer{
+.pointer {
 	cursor: pointer;
 }
 
-.bold{
+.bold {
 	font-weight: 700;
 	color: black;
 }
 
-.semibold{
+.semibold {
 	font-weight: 600;
 }
 

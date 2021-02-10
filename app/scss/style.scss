@@ -1,13 +1,13 @@
 // Шрифты
-@import '_fonts.scss';
+@import 'fonts.scss';
 // Библиотеки
-@import '_libs.scss';
+@import 'libs.scss';
 // Медиа переменные
-@import '_vars.scss';
+@import 'vars.scss';
 // Глобальные стили
-@import '_global.scss';
+@import 'global.scss';
 // Медиа запросы
-@import '_media.scss';
+@import 'media.scss';
 
 // header
 @import './blocks/header.scss';
