@@ -115,7 +115,7 @@ if (selectMonth) {
 			selectTf2.classList.remove('hide');
 			selectTf2.firstElementChild.selected = true;
 			showAreaTf2();
-		} 
+		}
 	});
 }
 
@@ -176,11 +176,54 @@ if (selectTf2) {
 	});
 }
 
+// находим нужные элементы Minecraft
+var showPopMine = document.querySelector('#js-btn-minecraft');
+var popOverlayMine = document.querySelector('.js-overlay-minecraft');
+var closePopMine = document.querySelector('.js-close-minecraft');
 
+// Прослушиваем клик на модальное окно и не передает клик родителю
+if (popOverlayMine) {
+	popOverlayMine.querySelector('.modal-content').addEventListener('click', function (event) {
+		event.stopPropagation();
+	});
+}
+
+// Открываем модальное окно по клику на баннер
+if (showPopMine) {
+	showPopMine.addEventListener('click', function () {
+		popOverlayMine.classList.toggle('hide');
+		popOverlayMine.scrollTop = 0;
+	});
+}
+
+// Закрываем модальное окно по клику на крестик
+if (closePopMine) {
+	closePopMine.addEventListener('click', function () {
+		popOverlayMine.classList.add('hide');
+	});
+}
+
+// Закрываем модальное окно по клику на область вокруг
+if (popOverlayMine) {
+	popOverlayMine.addEventListener('click', function () {
+		popOverlayMine.classList.add('hide');
+	});
+}
+
+
+// находим нужные элементы User
 var showPop = document.querySelector('#js-user-btn');
 var popOverlay = document.querySelector('.js-overlay-campaign');
 var closePop = document.querySelector('.js-close-campaign');
 
+// Прослушиваем клик на модальное окно и не передает клик родителю
+if (popOverlay) {
+	popOverlay.querySelector('.modal-content').addEventListener('click', function (event) {
+		event.stopPropagation();
+	});
+}
+
+// Открываем модальное окно по клику на кнопку
 if (showPop) {
 	showPop.addEventListener('click', function () {
 		popOverlay.classList.toggle('hide');
@@ -188,13 +231,14 @@ if (showPop) {
 	});
 }
 
+// Закрываем модальное окно по клику на крестик
 if (closePop) {
 	closePop.addEventListener('click', function () {
 		popOverlay.classList.add('hide');
-		// popOverlay.classList.toggle('offscroll');
 	});
 }
 
+// Закрываем модальное окно по клику на область вокруг
 if (popOverlay) {
 	popOverlay.addEventListener('click', function () {
 		popOverlay.classList.add('hide');
