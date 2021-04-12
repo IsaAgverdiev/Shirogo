@@ -24,6 +24,7 @@ body {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 36px;
+	line-height: 100%;
 	color: #525252;
 	padding-top: 50px;
 	padding-bottom: 40px;
@@ -63,6 +64,8 @@ button:active,
 button:focus {
 	border: none;
 	font-family: 'Comfortaa';
+	margin: 0;
+	padding: 0;
 }
 
 // Прижатие футера

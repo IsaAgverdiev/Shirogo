@@ -1,0 +1,27 @@
+// global
+@media (max-width: $breakpoint-lg-max) {}
+
+@media (max-width: $breakpoint-md-max) {
+	.container {
+		padding: 0 10px;
+	}
+	.title {
+			padding-top: 35px;
+			padding-bottom: 25px;
+	}
+}
+
+@media (max-width: $breakpoint-sm-max) {}
+
+@media (max-width: $breakpoint-xs-max) {}
+
+@media (max-width: $breakpoint-sm-min) {}
+
+
+// main
+@import './blocks/main/media.scss';
+
+
+
+
+

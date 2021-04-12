@@ -6,8 +6,7 @@
 @import 'vars.scss';
 // Глобальные стили
 @import 'global.scss';
-// Медиа запросы
-@import 'media.scss';
+
 
 // header
 @import './blocks/header.scss';
@@ -32,3 +31,6 @@
 
 // manga
 @import './blocks/manga/manga.scss';
+
+// Медиа запросы
+@import 'media.scss';

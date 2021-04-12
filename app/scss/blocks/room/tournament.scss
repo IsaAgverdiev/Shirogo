@@ -11,6 +11,11 @@
 		box-shadow: none;
 		border: 1px solid $grey-dark;
 		font-family: 'Raleway';
+		background-color: #fff;
+
+		option {
+			background-color: #fff;
+		}
 	}
 
 	>select {

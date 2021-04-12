@@ -1,14 +1,13 @@
-
 .services {
 	background-color: $grey-light;
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 
 	&__body {
 		display: grid;
-		column-gap: 30px;
-		row-gap: 30px;
-		grid-template-columns: repeat(5, 225px);
-		grid-template-rows: repeat(3, 225px);
+		justify-content: center;
+		grid-gap: 30px;
+		grid-template-columns: repeat(4, 225px);
+		grid-template-rows: repeat(2, 225px);
 	}
 
 	&__item {
@@ -45,12 +44,12 @@
 			top: 40%;
 		}
 	}
-	
+
 	&__item-text {
 		font-weight: 700;
 		margin: 0;
 	}
-	
+
 	&__item-subtext {
 		font-size: 16px;
 		margin: 0;

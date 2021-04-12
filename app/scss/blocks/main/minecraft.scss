@@ -1,15 +1,14 @@
 .minecfart-wrapper {
 	background-color: $grey-light;
-	padding-bottom: 60px;
+	padding-bottom: 50px;
 
 	&__image {
 		max-width: 100%;
-		min-height: 690px;
 		overflow: hidden;
 		
 		.server-img {
 			width: 100%;
-			height: auto;
+			height: 100%;
 			object-fit: cover;
 			border-radius: 20px;
 			background-color: $grey-dark;
