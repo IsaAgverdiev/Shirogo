@@ -1,0 +1,150 @@
+@media (max-width: $breakpoint-lg-max) {
+
+	.area,
+	.tournament-area,
+	.slider-donate {
+		width: 80%;
+	}
+}
+
+@media (max-width: $breakpoint-md-max) {
+	.information-menu__radiobuttons {
+		.radiobuttons__item {
+			max-width: 170px;
+			margin-bottom: 20px;
+
+			&+.radiobuttons__item {
+				margin-left: 30px;
+			}
+		}
+	}
+
+	.area,
+	.tournament-area,
+	.slider-donate {
+		width: 90%;
+	}
+
+	.slider-donate {
+
+		.slick-prev,
+		.slick-next {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-sm-max) {
+	.information-menu__radiobuttons {
+
+		.radiobuttons__item {
+			&+.radiobuttons__item {
+				margin-left: 20px;
+			}
+		}
+	}
+
+	.tournament__header {
+		select {
+			min-width: 250px;
+		}
+
+		>select {
+			&:first-child {
+				margin-right: 30px;
+			}
+		}
+	}
+
+	.slider-donate {
+		height: 500px;
+
+		&__item-image {
+			height: 500px;
+		}
+	}
+}
+
+@media (max-width: 496px) {}
+
+@media (max-width: $breakpoint-xs-max) {
+	.information-menu__radiobuttons {
+		max-width: 320px;
+		margin: 0 auto;
+		flex-wrap: wrap;
+
+		.radiobuttons__item {
+			max-width: 150px;
+			height: 40px;
+			margin-bottom: 10px;
+
+			&+.radiobuttons__item {
+				margin-left: 0;
+			}
+		}
+
+		.radiobuttons__item:nth-child(even) {
+			margin-left: 10px;
+		}
+	}
+
+	.tournament__header {
+		margin-bottom: 20px;
+
+		select {
+			min-width: 200px;
+		}
+
+		>select {
+			&:first-child {
+				margin-right: 20px;
+			}
+		}
+	}
+
+	.slider-donate {
+		height: 420px;
+
+		&__item-image {
+			height: 420px;
+		}
+	}
+}
+
+@media (max-width: 496px) {
+	.tournament__header {
+		// flex-direction: column;
+		margin-bottom: 10px;
+
+		select {
+			min-width: 150px;
+		}
+
+		>select {
+			&:first-child {
+				margin-right: 5px;
+			}
+		}
+	}
+}
+
+@media (max-width: 346px) {
+	.information-menu__radiobuttons {
+		flex-wrap: wrap;
+
+		.radiobuttons__item {
+			border-radius: 30px;
+			max-width: 100%;
+
+			&+.radiobuttons__item {
+				margin-left: 0;
+			}
+		}
+
+		.radiobuttons__item:nth-child(even) {
+			margin-left: 0;
+		}
+
+	}
+}

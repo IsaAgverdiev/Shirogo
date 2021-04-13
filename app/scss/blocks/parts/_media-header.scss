@@ -1,0 +1,34 @@
+@media (max-width: $breakpoint-lg-max) {}
+
+@media (max-width: $breakpoint-md-max) {
+	.menu__list-item {
+		padding-right: 35px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-sm-max) {
+	.menu {
+		// display: none;
+
+		&__list {
+			// flex-direction: column;
+		}
+	}
+	.user-btn {
+		display: none;
+	}
+	.btn-burger {
+		display: block;
+	}
+	
+}
+
+@media (max-width: $breakpoint-xs-max) {}
+
+@media (max-width: 496px) {}
+
+@media (max-width: $breakpoint-sm-min) {}

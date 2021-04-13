@@ -3,11 +3,16 @@
 	padding-bottom: 50px;
 
 	&__body {
+		max-width: 990px;
+		margin: 0 auto;
+	}
+
+	&__items {
 		display: grid;
 		justify-content: center;
 		grid-gap: 30px;
-		grid-template-columns: repeat(4, 225px);
-		grid-template-rows: repeat(2, 225px);
+		grid-template-columns: repeat(4, 1fr);
+		grid-auto-rows: minmax(225px, auto);
 	}
 
 	&__item {
@@ -32,16 +37,19 @@
 		color: $pink;
 		padding-top: 15px;
 		padding-bottom: 15px;
+		position: relative;
 
 		&::after {
 			content: "";
-			background-color: $grey-dark;
-			width: 160px;
-			height: 1px;
 			position: absolute;
 			left: 50%;
+			bottom: 0;
+			max-width: 160px;
+			width: 100%;
+			height: 1px;
+			margin-bottom: 5px;
+			background-color: $grey-dark;
 			transform: translateX(-50%);
-			top: 40%;
 		}
 	}
 
@@ -55,3 +63,4 @@
 		margin: 0;
 	}
 }
+

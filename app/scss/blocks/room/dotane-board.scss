@@ -2,28 +2,15 @@
 	margin: 0 auto 50px;
 	position: relative;
 	width: 55%;
-		height: 516px;
+	max-height: 650px;
 	box-shadow: 4px 4px 10px 0px rgba(82, 82, 82, 0.15);
 
-	&__item {
+	&__item-image {
 		cursor: pointer;
 		width: 100%;
-
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-
-		&-vertical {
-			width: 50%;
-			height: 516px;
-
-			img {
-				height: 100%;
-				object-fit: contain;
-			}
-		}
+		height: 650px;
+		margin: 0 auto;
+		object-fit: contain;
 	}
 
 	.slick-prev,
@@ -39,7 +26,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		cursor: pointer;
-}
+	}
 
 	.slick-prev {
 		left: -70px;

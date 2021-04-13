@@ -104,3 +104,25 @@
 	padding-top: 1px;
 	padding-left: 5px;
 }
+
+.btn-burger {
+	display: none;
+	margin-left: auto;
+	padding: 13px;
+	border: 2px solid #fff;
+	border-radius: 15px;
+	background-color: transparent;
+
+	&__line {
+		display: block;
+		width: 18px;
+		height: 2px;
+		border-radius: 20px;
+		background-color: #fff;
+		margin-top: 5px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}

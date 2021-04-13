@@ -1,24 +1,30 @@
 const {src, dest, watch, parallel, series} = require('gulp');
 
-const scss 				= require('gulp-sass');
-const concat 			= require('gulp-concat');
-const browserSync = require('browser-sync').create();
-const uglify 			= require('gulp-uglify-es').default;
+const scss 					= require('gulp-sass');
+const concat 				= require('gulp-concat');
+const browserSync		= require('browser-sync').create();
+const bssi 					= require('browsersync-ssi');
+const ssi 					= require('ssi');
+const uglify 				= require('gulp-uglify-es').default;
 const autoprefixer 	= require('gulp-autoprefixer');
-const imagemin 		= require('gulp-imagemin');
-const del 				= require('del');
+const imagemin 			= require('gulp-imagemin');
+const del 					= require('del');
+
 
 function browsersync () {
 	browserSync.init({
 		server : {
-			baseDir: 'app/'
-		}
+			baseDir: 'app/',
+			middleware: bssi({ baseDir: 'app/', ext: '.html' })
+		},
 	});
 }
 
 function cleanDist() {
 	return del('dist')
 }
+
+
 
 function images () {
 	return src('app/images/**/*')
@@ -84,6 +90,12 @@ function build() {
 	.pipe(dest('dist'))
 }
 
+async function buildhtml() {
+	let includes = new ssi('app/', 'dist/', '/**/*.html')
+	includes.compile()
+	del('dist/parts', { force: true })
+}
+
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
@@ -98,5 +110,5 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, images, build, buildhtml);
 exports.default = parallel(css, styles, scripts, browsersync, watching);

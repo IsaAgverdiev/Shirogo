@@ -6,8 +6,8 @@ $(document).ready(function () {
 		infinite: false,
 		draggable: false,
 		fade: true,
-		prevArrow: '<button id="prev" type="button" class="btn slick-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i> Назад</button>',
-		nextArrow: '<button id="next" type="button" class="btn slick-next">Вперед <i class="fa fa-chevron-right" aria-hidden="true"></i></button>',
+		prevArrow: '<button id="prev" type="button" class="btn slick-prev">Назад<i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
+		nextArrow: '<button id="next" type="button" class="btn slick-next">Вперед<i class="fa fa-chevron-right" aria-hidden="true"></i></button>',
 	});
 
 	//  slider-donate
@@ -16,6 +16,13 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		fade: true,
 	});
+});
+
+$(document).ready(function () {
+	//next slide on click
+	$(document).on('click', '.slider-donate .slider-donate__item-image', function () {
+		$(this).closest('.slider-donate').slick('slickNext');
+	})
 });
 
 // slider-manga прокрутка к началу страница
@@ -32,7 +39,6 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-
 	//next slide on click
 	$(document).on('click', '.slider-manga .slider__item', function () {
 		$('html, body').animate({ scrollTop: 200 }, 'fast');

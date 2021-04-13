@@ -5,7 +5,8 @@
 
 	.radiobuttons__item {
 		position: relative;
-		width: 150px;
+		max-width: 150px;
+		width: 100%;
 		height: 60px;
 		background-color: $grey-light;
 		color: $blue-light;

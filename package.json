@@ -12,20 +12,24 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.13",
+    "browsersync-ssi": "^0.2.4",
     "del": "^6.0.0",
     "gh-pages": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
+    "gulp-ssi": "^0.1.5",
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
     "npm-check-updates": "^10.2.5",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "ssi": "^0.1.5"
   },
   "dependencies": {
+    "gulp-imagemin": "^7.1.0",
+    "minimatch": "^3.0.4",
     "node-sass": "^5.0.0"
   }
 }
