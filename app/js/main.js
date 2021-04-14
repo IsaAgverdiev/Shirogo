@@ -218,7 +218,7 @@ if (popOverlayMine) {
 
 
 // находим нужные элементы User
-var showPop = document.querySelector('#js-user-btn');
+var showPop = document.querySelectorAll('.user-btn');
 var popOverlay = document.querySelector('.js-overlay-campaign');
 var closePop = document.querySelector('.js-close-campaign');
 
@@ -230,16 +230,17 @@ if (popOverlay) {
 }
 
 // Открываем модальное окно по клику на кнопку
-if (showPop) {
-	showPop.addEventListener('click', function () {
+for (let i = 0; i < showPop.length; i++) {
+	showPop[i].addEventListener('click', function () {
+		disableScroll();
 		popOverlay.classList.toggle('hide');
-		popOverlay.scrollTop = 0;
 	});
 }
 
 // Закрываем модальное окно по клику на крестик
 if (closePop) {
 	closePop.addEventListener('click', function () {
+		enableScroll();
 		popOverlay.classList.add('hide');
 	});
 }
@@ -247,6 +248,55 @@ if (closePop) {
 // Закрываем модальное окно по клику на область вокруг
 if (popOverlay) {
 	popOverlay.addEventListener('click', function () {
+		enableScroll();
 		popOverlay.classList.add('hide');
 	})
 }
+
+
+// открытие бокового меню по клику
+var openMenu = document.querySelector('.btn-burger');
+var menu = document.querySelector('.menu768')
+var overlayMenu = document.querySelector('.overlay-menu');
+var body = document.body;
+
+// скрытие меню при разрещении экрана меньше 767
+if (document.documentElement.clientWidth > 767) {
+	menu.classList.add('hide-menu');
+}
+// возвращение скрола при маштабировании
+if (document.documentElement.clientWidth > 767) {
+	enableScroll();
+}
+// появление\скрытие меню по клику
+openMenu.addEventListener('click', function () {
+	disableScroll();
+	openMenu.classList.toggle('btn-burger--clouse');
+	menu.classList.toggle('hide-menu');
+	overlayMenu.classList.toggle('hide');
+	if (overlayMenu.classList.contains('hide')) {
+		enableScroll();
+	}
+});
+
+// // скрытие меню при клике на оверлей
+// overlayMenu.addEventListener('click', function () {
+// 	enableScroll();
+// 	openMenu.classList.toggle('btn-burger--clouse');
+// 	menu.classList.toggle('hide-menu');
+// 	overlayMenu.classList.add('hide');
+// })
+
+function disableScroll() {
+	let pagePosition = window.scrollY;
+	body.classList.add('disable-scroll');
+	body.dataset.position = pagePosition;
+	body.style.top = -pagePosition + 'px';
+};
+function enableScroll() {
+	let pagePosition = parseInt(body.dataset.position, 10);
+	body.style.top = 'auto';
+	body.classList.remove('disable-scroll');
+	window.scroll({ top: pagePosition, left: 0 });
+	body.removeAttribute('data-position')
+};

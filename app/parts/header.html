@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-<meta name="viewport"
-  content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Shirogo’s Room</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -21,6 +21,30 @@
                 <span class="header__logo-name"> Shirogo’s Room </span>
               </div>
             </a>
+            <div class="overlay-menu hide">
+              <nav class="menu768">
+                <ul class="menu768__list">
+                  <li class="menu768__list-item">
+                    <a class="menu768__list-link" href="index.html" area-label="Главная">Главная</a>
+                  </li>
+                  <li class="menu768__list-item">
+                    <a class="menu768__list-link" href="butik.html" area-label="Бутик">Бутик</a>
+                  </li>
+                  <li class="menu768__list-item">
+                    <a class="menu768__list-link" href="room.html" area-label="Комната">Комната</a>
+                  </li>
+                  <li class="menu768__list-item">
+                    <a class="menu768__list-link" href="manga.html" area-label="Манга">Манга</a>
+                  </li>
+                </ul>
+                <div class="user-btn768__wrap user-btn__wrap">
+                  <button class="user-btn768 user-btn" type="button" id="js-user-btn">
+                    <img class="user-btn768__img user-btn__img" src="images/user-img.svg" alt="user" />
+                    <span class="user-btn768__text user-btn__text">Войти</span>
+                  </button>
+                </div>
+              </nav>
+            </div>
             <nav class="menu">
               <ul class="menu__list">
                 <li class="menu__list-item">
@@ -36,17 +60,17 @@
                   <a href="manga.html" class="menu__list-link" area-label="Манга">Манга</a>
                 </li>
               </ul>
+              <button type="button" class="user-btn" id="js-user-btn">
+                <img class="user-btn__img" src="images/user-img.svg" alt="user" />
+                <span class="user-btn__text">Войти</span>
+              </button>
             </nav>
-            <button type="button" class="user-btn" id="js-user-btn">
-              <img class="user-btn__img" src="images/user-img.svg" alt="user" />
-              <span class="user-btn__text">Войти</span>
-            </button>
             <button class="btn-burger">
               <span class="btn-burger__line"></span>
               <span class="btn-burger__line"></span>
               <span class="btn-burger__line"></span>
             </button>
-          </div>
         </div>
-      </header>
     </div>
+    </header>
+  </div>

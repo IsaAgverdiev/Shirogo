@@ -45,6 +45,12 @@
 		}
 	}
 
+	.area {
+		ul {
+			padding: 0px 0px 10px 5px;
+		}
+	}
+
 	.tournament__header {
 		select {
 			min-width: 250px;
@@ -57,11 +63,38 @@
 		}
 	}
 
-	.slider-donate {
-		height: 500px;
+	.tournament-area {
+		&__inner {
+			margin-left: 10px;
 
-		&__item-image {
+			&-content {
+				padding-left: 15px;
+			}
+
+			ul {
+				font-size: 14px;
+			}
+
+			li {
+				padding-bottom: 0px;
+			}
+
+			h2 {
+				padding-top: 10px;
+			}
+
+			h3 {
+				padding-top: 5px;
+				padding-bottom: 0px;
+			}
+		}
+
+		.slider-donate {
 			height: 500px;
+
+			&__item-image {
+				height: 500px;
+			}
 		}
 	}
 }
@@ -114,7 +147,6 @@
 
 @media (max-width: 496px) {
 	.tournament__header {
-		// flex-direction: column;
 		margin-bottom: 10px;
 
 		select {
