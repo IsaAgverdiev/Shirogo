@@ -103,24 +103,32 @@ var area = document.querySelector('.tournament-area');
 // выбор недели
 var selectTf1 = document.querySelector('#js-select-week');
 var selectTf2 = document.querySelector('#js-select-week2');
+var selectTf3 = document.querySelector('#js-select-week3');
 
 
 // Показывает нужную неделю турнира
-
 if (selectMonth) {
 	selectMonth.addEventListener('change', function () {
 		area.scrollTop = area.clientTop;
 
 		if (selectMonth.value == 'tf1-weeks') {
 			selectTf2.classList.add('hide');
+			selectTf3.classList.add('hide');
 			selectTf1.classList.remove('hide');
 			selectTf1.firstElementChild.selected = true;
 			showAreaTf1();
 		} else if (selectMonth.value == 'tf2-weeks') {
-			selectTf1.classList.toggle('hide');
+			selectTf1.classList.add('hide');
+			selectTf3.classList.add('hide');
 			selectTf2.classList.remove('hide');
 			selectTf2.firstElementChild.selected = true;
 			showAreaTf2();
+		} else if (selectMonth.value == 'tf3-weeks') {
+			selectTf1.classList.add('hide');
+			selectTf2.classList.add('hide');
+			selectTf3.classList.remove('hide');
+			selectTf3.firstElementChild.selected = true;
+			showAreaTf3();
 		}
 	});
 }
@@ -131,6 +139,7 @@ if (selectMonth) {
 // тексотвые поля
 var areaTf1 = document.querySelectorAll('.tf1');
 var areaTf2 = document.querySelectorAll('.tf2');
+var areaTf3 = document.querySelectorAll('.tf3');
 
 // показывает area-tf1(первый)
 function showAreaTf1() {
@@ -138,9 +147,12 @@ function showAreaTf1() {
 		(item.classList.contains('tf1-1w')) ? item.classList.remove('hide')
 			: item.classList.add('hide');
 	});
-
 	// скрывает  area - tf2
 	areaTf2.forEach(function (item) {
+		item.classList.add('hide');
+	});
+	// скрывает  area - tf3
+	areaTf3.forEach(function (item) {
 		item.classList.add('hide');
 	});
 };
@@ -151,9 +163,28 @@ function showAreaTf2() {
 	areaTf1.forEach(function (item) {
 		item.classList.add('hide');
 	});
-
+	// скрывает  area - tf3
+	areaTf3.forEach(function (item) {
+		item.classList.add('hide');
+	});
 	areaTf2.forEach(function (item) {
 		(item.classList.contains('tf2-1w')) ? item.classList.remove('hide')
+			: item.classList.add('hide');
+	});
+};
+
+// показывает area-tf3(первый)
+function showAreaTf3() {
+	// скрывает  area - tf1
+	areaTf1.forEach(function (item) {
+		item.classList.add('hide');
+	});
+	// скрывает  area - tf3
+	areaTf2.forEach(function (item) {
+		item.classList.add('hide');
+	});
+	areaTf3.forEach(function (item) {
+		(item.classList.contains('tf3-1w')) ? item.classList.remove('hide')
 			: item.classList.add('hide');
 	});
 };
@@ -175,9 +206,20 @@ if (selectTf2) {
 	selectTf2.addEventListener('change', function () {
 		area.scrollTop = area.clientTop;
 
-		for (i = 0; i < areaTf1.length; i++) {
+		for (i = 0; i < areaTf2.length; i++) {
 			(areaTf2[i].classList.contains(this.value)) ? areaTf2[i].classList.remove('hide')
 				: areaTf2[i].classList.add('hide');
+		}
+	});
+}
+
+if (selectTf3) {
+	selectTf3.addEventListener('change', function () {
+		area.scrollTop = area.clientTop;
+
+		for (i = 0; i < areaTf3.length; i++) {
+			(areaTf3[i].classList.contains(this.value)) ? areaTf3[i].classList.remove('hide')
+				: areaTf3[i].classList.add('hide');
 		}
 	});
 }
@@ -278,14 +320,6 @@ openMenu.addEventListener('click', function () {
 		enableScroll();
 	}
 });
-
-// // скрытие меню при клике на оверлей
-// overlayMenu.addEventListener('click', function () {
-// 	enableScroll();
-// 	openMenu.classList.toggle('btn-burger--clouse');
-// 	menu.classList.toggle('hide-menu');
-// 	overlayMenu.classList.add('hide');
-// })
 
 function disableScroll() {
 	let pagePosition = window.scrollY;

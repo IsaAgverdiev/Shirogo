@@ -57,8 +57,9 @@
 			display: flex;
 			justify-content: center;
 			object-fit: cover;
-
+			
 			img {
+				margin: 0 auto;
 				width: 90%;
 				margin-top: 15px;
 			}
