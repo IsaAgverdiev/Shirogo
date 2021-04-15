@@ -19,12 +19,18 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+	$(".fancybox").fancybox({
+		openEffect: 'none',
+		closeEffect: 'none'
+	});
+});
+
+$(document).ready(function () {
 	//next slide on click
 	$(document).on('click', '.slider-donate .slider-donate__item-image', function () {
 		$(this).closest('.slider-donate').slick('slickNext');
 	})
 });
-
 // slider-manga прокрутка к началу страница
 $(document).ready(function () {
 	// при клике на "Вперед"
@@ -43,7 +49,7 @@ $(document).ready(function () {
 	$(document).on('click', '.slider-manga .slider__item', function () {
 		$('html, body').animate({ scrollTop: 200 }, 'fast');
 		$(this).closest('.slider-manga').slick('slickNext');
-	})
+	});
 
 	//count page num
 	$('.js-select-page').each(function () {
