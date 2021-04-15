@@ -1,160 +1,200 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shirogo’s Room</title>
-	<link rel="stylesheet" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Shirogo’s Room</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-	<div class="footer-down">
-		<div class="content">
-			<header class="header">
-				<div class="container">
-					<div class="header__inner">
-						<a class="header__logo-link" href="index.html">
-							<div class="header__logo">
-								<img class="header__logo-img" src="images/logo.png " alt="logo">
-								<span class="header__logo-name">
-									Shirogo’s Room
-								</span>
-							</div>
-						</a>
-						<nav class="menu">
-							<ul class="menu__list">
-								<li class="menu__list-item">
-									<a href="index.html" class="menu__list-link" area-label="Главная">Главная</a>
-								</li>
-								<li class="menu__list-item">
-									<a href="butik.html" class="menu__list-link" area-label="Бутик">Бутик</a>
-								</li>
-								<li class="menu__list-item">
-									<a href="room.html" class="menu__list-link" area-label="Комната">Комната</a>
-								</li>
-								<li class="menu__list-item">
-									<a href="manga.html" class="menu__list-link" area-label="Манга">Манга</a>
-								</li>
-							</ul>
-						</nav>
-						<button type="button" class="user-btn" id="js-user-btn">
-							<img class="user-btn__img" src="images/user-img.svg" alt="user">
-							<span class="user-btn__text">Войти</span>
-						</button>
-					</div>
-
-				</div>
-			</header>
-		</div>
+  <div class="footer-down">
+    <div class="content">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <a class="header__logo-link" href="index.html">
+              <div class="header__logo">
+                <img class="header__logo-img" src="images/logo.png " alt="logo">
+                <span class="header__logo-name"> Shirogo’s Room </span>
+              </div>
+            </a>
+            <div class="overlay-menu hide">
+              <nav class="menu768">
+                <ul class="menu768__list">
+                  <li class="menu768__list-item">
+                    <a class="menu768__list-link" href="index.html" area-label="Главная">Главная</a>
+                  </li>
+                  <li class="menu768__list-item">
+                    <a class="menu768__list-link" href="butik.html" area-label="Бутик">Бутик</a>
+                  </li>
+                  <li class="menu768__list-item">
+                    <a class="menu768__list-link" href="room.html" area-label="Комната">Комната</a>
+                  </li>
+                  <li class="menu768__list-item">
+                    <a class="menu768__list-link" href="manga.html" area-label="Манга">Манга</a>
+                  </li>
+                </ul>
+                <div class="user-btn768__wrap user-btn__wrap">
+                  <button class="user-btn768 user-btn" type="button" id="js-user-btn">
+                    <img class="user-btn768__img user-btn__img" src="images/user-img.svg" alt="user" />
+                    <span class="user-btn768__text user-btn__text">Войти</span>
+                  </button>
+                </div>
+              </nav>
+            </div>
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__list-item">
+                  <a href="index.html" class="menu__list-link" area-label="Главная">Главная</a>
+                </li>
+                <li class="menu__list-item">
+                  <a href="butik.html" class="menu__list-link" area-label="Бутик">Бутик</a>
+                </li>
+                <li class="menu__list-item">
+                  <a href="room.html" class="menu__list-link" area-label="Комната">Комната</a>
+                </li>
+                <li class="menu__list-item">
+                  <a href="manga.html" class="menu__list-link" area-label="Манга">Манга</a>
+                </li>
+              </ul>
+              <button type="button" class="user-btn" id="js-user-btn">
+                <img class="user-btn__img" src="images/user-img.svg" alt="user" />
+                <span class="user-btn__text">Войти</span>
+              </button>
+            </nav>
+            <button class="btn-burger">
+              <span class="btn-burger__line"></span>
+              <span class="btn-burger__line"></span>
+              <span class="btn-burger__line"></span>
+            </button>
+        </div>
+    </div>
+    </header>
+  </div>
 
 		<main class="main">
 			<section class="services">
 				<div class="container">
 					<h1 class="title"> Услуги за валюту (данго/до)</h1>
 					<div class="services__body">
-						<div class="services__item">
-							<span class="services__item-num">#1</span>
-							<span class="services__item-price">1.5 до</span>
-							<p class="services__item-text">Передать «‎1 до» кому-нибуть</p>
-							<p class="services__item-subtext">(округление всегда в большую сторону)</p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#2</span>
-							<span class="services__item-price">40 до</span>
-							<p class="services__item-text">Песня на гитаре</p>
-							<p class="services__item-subtext">аккордами либо нотами</p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#3</span>
-							<span class="services__item-price">60 до</span>
-							<p class="services__item-text">Песня на блокфлейте</p>
-							<p class="services__item-subtext"></p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#4 </span>
-							<span class="services__item-price">80 до</span>
-							<p class="services__item-text">
-								Скетч без цвета, с выкладыванием в группу <span class="navy-text">ВК</span>
-							</p>
-							<p class="services__item-subtext"></p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#5</span>
-							<span class="services__item-price">110 до</span>
-							<p class="services__item-text">Песня на синтезаторе</p>
-							<p class="services__item-subtext">аккордами либо нотами</p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#6</span>
-							<span class="services__item-price">60 до</span>
-							<p class="services__item-text">Обменять до на кредиты</p>
-							<p class="services__item-subtext">(Бот Shirogo)</p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#7</span>
-							<span class="services__item-price">210 до</span>
-							<p class="services__item-text">Песня на гитаре, сложно</p>
-							<p class="services__item-subtext"></p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#8</span>
-							<span class="services__item-price">250 до</span>
-							<p class="services__item-text">
-								Скетч в цвете с выкладыванием в группу <span class="navy-text">ВК</span>
-							</p>
-							<p class="services__item-subtext"></p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#9</span>
-							<span class="services__item-price"> 2 до за 1 сек</span>
-							<p class="services__item-text">
-								Видео-кавер песни на <span class="red-text">Youtube</span>
-							</p>
-							<p class="services__item-subtext">-50 до русский язык</p>
-							<p class="services__item-subtext">+50 иностранный</p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#10</span>
-							<span class="services__item-price">210 до за 1ч</span>
-							<p class="services__item-text">Заказ игры</p>
-							<p class="services__item-subtext">-50-200 до — на мое усмотрение, если мне игра понравитья</p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#11</span>
-							<span class="services__item-price">260 до</span>
-							<p class="services__item-text">
-								1 страница новой манги: <br>«FOR-LOWERS»</p>
-							<p class="services__item-subtext"></p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#12</span>
-							<span class="services__item-price">500 до</span>
-							<p class="services__item-text">
-								Стикеры в <span class="navy-text">ВК</span> на выбор</p>
-							<p class="services__item-subtext">(до 10 голосов)</p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#13</span>
-							<span class="services__item-price">800 до</span>
-							<p class="services__item-text">
-								Стикеры в <span class="navy-text">ВК</span> на выбор
-							</p>
-							<p class="services__item-subtext">(до 20 голосов)</p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#14</span>
-							<span class="services__item-price">1100 до</span>
-							<p class="services__item-text">Данго-саб на 1 месяц</p>
-							<p class="services__item-subtext"></p>
-						</div>
-						<div class="services__item">
-							<span class="services__item-num">#15</span>
-							<span class="services__item-price">Много до</span>
-							<p class="services__item-text">
-								Еще не придумал
-							</p>
-							<p class="services__item-subtext"></p>
+						<div class="services__items">
+							<div class="services__item">
+								<span class="services__item-num">#1</span>
+								<span class="services__item-price">80 до</span>
+								<p class="services__item-text">Песня на гитаре/блокфлейте/синтезаторе на выбор</p>
+								<p class="services__item-subtext">(простенько)</p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#2</span>
+								<span class="services__item-price">80 до</span>
+								<p class="services__item-text">
+									Скетч без цвета, с выкладыванием в группу <span class="navy-text">ВК</span>
+								</p>
+								<p class="services__item-subtext"></p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#3</span>
+								<span class="services__item-price">250 до</span>
+								<p class="services__item-text">
+									Скетч в цвете с выкладыванием в группу <span class="navy-text">ВК</span>
+								</p>
+								<p class="services__item-subtext"></p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#4</span>
+								<span class="services__item-price">200 до</span>
+								<p class="services__item-text">
+									Видео-кавер песни на <span class="red-text">Youtube</span>
+								</p>
+								<p class="services__item-subtext">Перевод на русский, сокращение до 2 минут</p>
+								<p class="services__item-subtext"></p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#5</span>
+								<span class="services__item-price">210 до за 1 час</span>
+								<p class="services__item-text">Заказ игры</p>
+								<p class="services__item-subtext">-10-200 до — на мое усмотрение, если мне игра понравится</p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#6</span>
+								<span class="services__item-price">500 до</span>
+								<p class="services__item-text">
+									Стикеры в <span class="navy-text">ВК</span> на выбор</p>
+								<p class="services__item-subtext">(до 10 голосов)</p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#7</span>
+								<span class="services__item-price">800 до</span>
+								<p class="services__item-text">
+									Стикеры в <span class="navy-text">ВК</span> на выбор
+								</p>
+								<p class="services__item-subtext">(до 20 голосов)</p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#8</span>
+								<span class="services__item-price">1100 до</span>
+								<p class="services__item-text">Данго-саб на 1 месяц</p>
+								<p class="services__item-subtext"></p>
+							</div>
+							<!-- <div class="services__item">
+								<span class="services__item-num">#9</span>
+								<span class="services__item-price"></span>
+								<p class="services__item-text">
+							
+								</p>
+								<p class="services__item-subtext"></p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#10</span>
+								<span class="services__item-price"></span>
+								<p class="services__item-text">
+							
+								</p>
+								<p class="services__item-subtext"></p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#11</span>
+								<span class="services__item-price"></span>
+								<p class="services__item-text">
+							
+								</p>
+								<p class="services__item-subtext"></p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#12</span>
+								<span class="services__item-price"></span>
+								<p class="services__item-text">
+							
+								</p>
+								<p class="services__item-subtext"></p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#13</span>
+								<span class="services__item-price"></span>
+								<p class="services__item-text">
+							
+								</p>
+								<p class="services__item-subtext"></p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#14</span>
+								<span class="services__item-price"></span>
+								<p class="services__item-text">
+							
+								</p>
+								<p class="services__item-subtext"></p>
+							</div>
+							<div class="services__item">
+								<span class="services__item-num">#15</span>
+								<span class="services__item-price"></span>
+								<p class="services__item-text">
+							
+								</p>
+								<p class="services__item-subtext"></p>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -190,42 +230,40 @@
         </div>
         <!-- popup user -->
 		</main>
-
-
-
-		<footer class="footer">
-			<div class="footer__inner">
-				<span class="footer__name">GODofDANGO</span>
-				<div class="footer__social-links">
-					<a class="footer__social-link" href="https://www.twitch.tv/godofdango" target="blank">
-						<img class="footer__social-image" src="images/twitch.svg" alt="twich">
-					</a>
-					<a class="footer__social-link" href="https://www.youtube.com/godofdango" target="blank">
-						<img class="footer__social-image" src="images/youtube.svg" alt="youtube">
-					</a>
-					<a class="footer__social-link" href="https://vk.com/godofdango" target="blank">
-						<img class="footer__social-image" src="images/vk.svg" alt="vk">
-					</a>
-					<a class="footer__social-link" href="https://www.instagram.com/evgendango/" target="blank">
-						<img class="footer__social-image" src="images/inst.svg" alt="instagram">
-					</a>
-					<a class="footer__social-link" href="https://discord.com/invite/cgMPuCz" target="blank">
-						<img class="footer__social-image" src="images/discord.svg" alt="discord">
-					</a>
-				</div>
-				<div class="footer__bottom">
-					<span class="footer__copy">© 2020 все права защищены</span>
-					<div class="footer__autor-name">
-						<span>Сайт разработал:</span>
-						<a class="footer__autor-link" href="https://vk.com/aisa000511" target="blank">
-							ISA
-						</a>
-					</div>
-				</div>
+<footer class="footer">
+	<div class="footer__inner">
+		<span class="footer__name">GODofDANGO</span>
+		<div class="footer__social-links">
+			<a class="footer__social-link" href="https://www.twitch.tv/godofdango" target="blank">
+				<img class="footer__social-image twich" src="images/twitch.svg" alt="twich" />
+			</a>
+			<a class="footer__social-link" href="https://www.youtube.com/godofdango" target="blank">
+				<img class="footer__social-image youtube" src="images/youtube.svg" alt="youtube" />
+			</a>
+			<a class="footer__social-link" href="https://vk.com/godofdango" target="blank">
+				<img class="footer__social-image vk" src="images/vk.svg" alt="vk" />
+			</a>
+			<a class="footer__social-link" href="https://www.instagram.com/evgendango/" target="blank">
+				<img class="footer__social-image inst" src="images/inst.svg" alt="instagram" />
+			</a>
+			<a class="footer__social-link" href="https://discord.com/invite/cgMPuCz" target="blank">
+				<img class="footer__social-image discord" src="images/discord.svg" alt="discord" />
+			</a>
+		</div>
+		<div class="footer__bottom">
+			<span class="footer__copy">© 2020 все права защищены</span>
+			<div class="footer__autor-name">
+				<span>Сайт разработал:</span>
+				<a class="footer__autor-link" href="https://vk.com/aisa000511" target="blank">
+					ISA
+				</a>
 			</div>
-		</footer>
+		</div>
 	</div>
-	<script src="js/main.min.js"></script>
+</footer>
+</div>
+
+<script src="js/main.min.js"></script>
 </body>
 
 </html>
