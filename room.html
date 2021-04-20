@@ -21,7 +21,7 @@
                 <span class="header__logo-name"> Shirogo’s Room </span>
               </div>
             </a>
-            <div class="overlay-menu hide">
+            <div class="overlay-menu hide fix-blocks">
               <nav class="menu768">
                 <ul class="menu768__list">
                   <li class="menu768__list-item">
@@ -65,7 +65,7 @@
                 <span class="user-btn__text">Войти</span>
               </button>
             </nav>
-            <button class="btn-burger">
+            <button type="button" class="btn-burger" id="js-burger-btn">
               <span class="btn-burger__line"></span>
               <span class="btn-burger__line"></span>
               <span class="btn-burger__line"></span>
@@ -1416,7 +1416,9 @@
     							</tr>
     						</tbody>
     					</table>
-    					<div class="final-table"><img src="images/final-table.png" alt=""></div>
+    					<a class="final-table final-table__image" data-fancybox="table-1" href="images/final-table.png">
+								<img src="images/final-table.png" alt="final-table-1">
+							</a>
     				</div>
     				<div class="tournament-area__inner tf1 tf1-rw hide" id="tf1-rw">
 
@@ -2397,7 +2399,9 @@
     							<li>2. yobani_pomidorka</li>
     							<li>3. chusui_uchiha</li>
     						</ul>
-    						<div class="final-table-2"><img src="images/final-table-2.jpg" alt=""></div>
+    						<a class="final-table-2 final-table__image" data-fancybox="table-2" href="images/final-table-2.jpg">
+									<img src="images/final-table-2.jpg" alt="">
+								</a>
     					</div>
 
     				</div>
@@ -3662,9 +3666,15 @@
     							<li>+10 eg_geraskin (ChoiceChamber)</li>
     						</ul>
     					</div>
-    					<a class="final-table-2"><img src="images/final-table-3.jpg" alt=""></a>
-    					<a class="final-table-2"><img src="images/final-table-3-1.jpg" alt=""></a>
-    					<a class="final-table-2"><img src="images/final-table-3-2.jpg" alt=""></a>
+    					<a class="final-table-3 final-table__image" data-fancybox="table-3" href="images/final-table-3.jpg">
+								<img src="images/final-table-3.jpg" alt="final-table">
+							</a>
+    					<a class="final-table-3 final-table__image" data-fancybox="table-3" href="images/final-table-3-1.jpg">
+								<img src="images/final-table-3-1.jpg" alt="final-table">
+							</a>
+    					<a class="final-table-3 final-table__image" data-fancybox="table-3" href="images/final-table-3-2.jpg">
+								<img src="images/final-table-3-2.jpg" alt="final-table">
+							</a>
     				</div>
 
     				<div class="tournament-area__inner tf3 tf3-rw hide" id="tf3-rw">
@@ -3776,19 +3786,19 @@
     		<div class="container">
     			<h1 class="title">Досочки первых донатеров</h1>
     			<div class="slider-donate">
-    				<img class="slider-donate__item-image" src="images/slider-donate/1.jpg" alt="slider-donate">
-    				<img class="slider-donate__item-image" src="images/slider-donate/2.jpg" alt="slider-donate">
-    				<img class="slider-donate__item-image" src="images/slider-donate/3.jpg" alt="slider-donate">
-    				<img class="slider-donate__item-image" src="images/slider-donate/4.jpg" alt="slider-donate">
-    				<img class="slider-donate__item-image" src="images/slider-donate/5.jpg" alt="slider-donate">
-    				<img class="slider-donate__item-image" src="images/slider-donate/6.jpg" alt="slider-donate">
-    				<img class="slider-donate__item-image" src="images/slider-donate/7.jpg" alt="slider-donate">
-    				<img class="slider-donate__item-image" src="images/slider-donate/8.jpg" alt="slider-donate">
+    				<img class="slider-donate__item-image" data-lazy="images/slider-donate/1.jpg" alt="slider-donate">
+    				<img class="slider-donate__item-image" data-lazy="images/slider-donate/2.jpg" alt="slider-donate">
+    				<img class="slider-donate__item-image" data-lazy="images/slider-donate/3.jpg" alt="slider-donate">
+    				<img class="slider-donate__item-image" data-lazy="images/slider-donate/4.jpg" alt="slider-donate">
+    				<img class="slider-donate__item-image" data-lazy="images/slider-donate/5.jpg" alt="slider-donate">
+    				<img class="slider-donate__item-image" data-lazy="images/slider-donate/6.jpg" alt="slider-donate">
+    				<img class="slider-donate__item-image" data-lazy="images/slider-donate/7.jpg" alt="slider-donate">
+    				<img class="slider-donate__item-image" data-lazy="images/slider-donate/8.jpg" alt="slider-donate">
     			</div>
     		</div>
     	</section>
     	<!-- popup user-->
-    	<div class="overlay js-overlay-campaign hide">
+    	<div class="overlay js-overlay-campaign hide fix-blocks">
     		<div class="popup js-popup-campaign">
     			<div class="modal-content">
     				<p>
