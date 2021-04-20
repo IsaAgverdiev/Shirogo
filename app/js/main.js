@@ -1,74 +1,89 @@
-// $(document).ready(function () {
-// 	//  slider-manga
-// 	$('.slider-manga').slick({
-// 		slidesToShow: 1,
-// 		slidesToScroll: 1,
-// 		infinite: false,
-// 		draggable: false,
-// 		fade: true,
-// 		prevArrow: '<button id="prev" type="button" class="btn slick-prev">Назад<i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
-// 		nextArrow: '<button id="next" type="button" class="btn slick-next">Вперед<i class="fa fa-chevron-right" aria-hidden="true"></i></button>',
-// 	});
+$(document).ready(function () {
+	//  slider-manga
+	$('.slider-manga').slick({
+		lazyLoad: 'ondemand',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: false,
+		draggable: false,
+		fade: true,
+		prevArrow: '<button id="prev" type="button" class="btn slick-prev">Назад<i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
+		nextArrow: '<button id="next" type="button" class="btn slick-next">Вперед<i class="fa fa-chevron-right" aria-hidden="true"></i></button>',
+	});
 
-// 	//  slider-donate
-// 	$('.slider-donate').slick({
-// 		slidesToShow: 1,
-// 		slidesToScroll: 1,
-// 		fade: true,
-// 	});
-// });
+	//  slider-donate
+	$('.slider-donate').slick({
+		lazyLoad: 'ondemand',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+	});
+});
 
-// $(document).ready(function () {
-// 	//next slide on click
-// 	$(document).on('click', '.slider-donate .slider-donate__item-image', function () {
-// 		$(this).closest('.slider-donate').slick('slickNext');
-// 	})
-// });
-// // slider-manga прокрутка к началу страница
-// $(document).ready(function () {
-// 	// при клике на "Вперед"
-// 	$('.slider-manga .slick-next').click(function () {
-// 		$('html, body').animate({ scrollTop: 200 }, 'fast');
-// 	});
+$(document).ready(function () {
+	//next slide on click
+	$(document).on('click', '.slider-donate .slider-donate__item-image', function () {
+		$(this).closest('.slider-donate').slick('slickNext');
+	})
+});
+// slider-manga прокрутка к началу страница
+$(document).ready(function () {
+	// при клике на "Вперед"
+	$('.slider-manga .slick-next').click(function () {
+		if (document.documentElement.clientWidth > 767) {
+			$('html, body').animate({ scrollTop: 200 }, 'fast');
+		}
+	});
 
-// 	// при клике на "Назад"
-// 	$('.slider-manga .slick-prev').click(function () {
-// 		$('html, body').animate({ scrollTop: 200 }, 'fast');
-// 	});
-// });
+	// при клике на "Назад"
+	$('.slider-manga .slick-prev').click(function () {
+		if (document.documentElement.clientWidth > 767) {
+			$('html, body').animate({ scrollTop: 200 }, 'fast');
+		}
+	});
+});
 
-// $(document).ready(function () {
-// 	//next slide on click
-// 	$(document).on('click', '.slider-manga .slider__item', function () {
-// 		$('html, body').animate({ scrollTop: 200 }, 'fast');
-// 		$(this).closest('.slider-manga').slick('slickNext');
-// 	});
+$(document).ready(function () {
+	//next slide on click
+	$(document).on('click', '.slider-manga .slider__item', function () {
+		if (document.documentElement.clientWidth > 767) {
+			$('html, body').animate({ scrollTop: 200 }, 'fast');
+		}
+		$(this).closest('.slider-manga').slick('slickNext');
+	});
 
-// 	//count page num
-// 	$('.js-select-page').each(function () {
-// 		var pagesOnSlider = $('.slider-manga').eq($(this).index()).find('.slick-slide').length;
-// 		for (let i = 0; i < pagesOnSlider; i++) {
-// 			$(this).append('<option value="' + parseInt(i) + '">Страница ' + parseInt(i + 1) + '</option>')
-// 		}
-// 	})
+	//count page num
+	$('.js-select-page').each(function () {
+		var pagesOnSlider = $('.slider-manga').eq($(this).index()).find('.slick-slide').length;
+		for (let i = 0; i < pagesOnSlider; i++) {
+			$(this).append('<option value="' + parseInt(i) + '">Страница ' + parseInt(i + 1) + '</option>')
+		}
+	})
 
-// 	//change slider on select
-// 	$(document).on('change', '.js-select-slider', function () {
-// 		$('.slider-manga').hide();
-// 		$('.slider-manga').eq($(this).find('option:checked').index()).fadeIn(300);
-// 		$('.js-select-page').hide();
-// 		$('.js-select-page').eq($(this).find('option:checked').index()).css('display', 'block');
-// 	})
+	//change slider on select
+	$(document).on('change', '.js-select-slider', function () {
+		$('.slider-manga').hide();
+		$('.slider-manga').eq($(this).find('option:checked').index()).fadeIn(300);
+		$('.js-select-page').hide();
+		$('.js-select-page').eq($(this).find('option:checked').index()).css('display', 'block');
+	})
 
-// 	//change page on select
-// 	$(document).on('change', '.js-select-page', function () {
-// 		$('.slider-manga').eq($(this).index()).slick('slickGoTo', $(this).find('option:checked').index());
-// 	})
+	//change page on select
+	$(document).on('change', '.js-select-page', function () {
+		$('.slider-manga').eq($(this).index()).slick('slickGoTo', $(this).find('option:checked').index());
+	})
 
-// 	$('.slider-manga').on('afterChange', function () {
-// 		$('.js-select-page').eq($(this).index()).val($(this).slick('slickCurrentSlide'))
-// 	})
-// })
+	$('.slider-manga').on('afterChange', function () {
+		$('.js-select-page').eq($(this).index()).val($(this).slick('slickCurrentSlide'))
+	})
+})
+
+$(document).ready(function () {
+	$(".fancybox").fancybox({
+		openEffect: 'none',
+		closeEffect: 'none'
+	});
+})
 
 var radioBtn = document.querySelectorAll('.radiobuttons__item');
 var areaInfo = document.querySelectorAll('[data-area]');
@@ -230,24 +245,28 @@ if (popOverlayMine) {
 	});
 }
 
+
 // Открываем модальное окно по клику на баннер
 if (showPopMine) {
 	showPopMine.addEventListener('click', function () {
+		disableScroll();
 		popOverlayMine.classList.toggle('hide');
 		popOverlayMine.scrollTop = 0;
 	});
 }
 
 // Закрываем модальное окно по клику на крестик
-if (closePopMine) {
+if (showPopMine) {
 	closePopMine.addEventListener('click', function () {
+		enableScroll();
 		popOverlayMine.classList.add('hide');
 	});
 }
 
 // Закрываем модальное окно по клику на область вокруг
-if (popOverlayMine) {
+if (showPopMine) {
 	popOverlayMine.addEventListener('click', function () {
+		enableScroll();
 		popOverlayMine.classList.add('hide');
 	});
 }
@@ -289,45 +308,42 @@ if (popOverlay) {
 	})
 }
 
-
 // открытие бокового меню по клику
-var openMenu = document.querySelector('.btn-burger');
-var menu = document.querySelector('.menu768')
+var openMenuBtn = document.querySelector('.btn-burger');
 var overlayMenu = document.querySelector('.overlay-menu');
+var menu = document.querySelector('.menu768')
 var body = document.body;
-
+var fixBlocks = document.querySelectorAll('.fix-blocks');
 // возвращение скрола при маштабировании
 if (document.documentElement.clientWidth > 767) {
 	enableScroll();
 }
-// появление\скрытие меню по клику
-openMenu.addEventListener('click', function () {
-	disableScroll();
-	openMenu.classList.toggle('btn-burger--clouse');
+// показ бокового меню
+function showRightMenu() {
+	openMenuBtn.classList.toggle('btn-burger--clouse');
 	menu.classList.toggle('hide-menu');
 	overlayMenu.classList.toggle('hide');
+}
+
+// появление\скрытие меню + фиксация скролла по клику
+openMenuBtn.addEventListener('mousedown', function () {
+	disableScroll();
+	showRightMenu();
 	if (overlayMenu.classList.contains('hide')) {
 		enableScroll();
 	}
 });
 
-let fixBlocks = document.querySelectorAll('.fix-blocks');
-
 function disableScroll() {
-	// let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
-	let paddingOffset = window.innerWidth;
-	let paddingInner = body.offsetWidth;
-	console.log(paddingOffset)
-	console.log(paddingInner)
-	console.log('click')
-	// fixBlocks.forEach((el) => {
-	// 	el.style.paddingRight = paddingOffset;
-	// });
-	// body.style.paddingRight = paddingOffset;
-	// let pagePosition = window.scrollY;
-	// body.classList.add('disable-scroll');
-	// body.dataset.position = pagePosition;
-	// body.style.top = -pagePosition + 'px';
+	let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+	fixBlocks.forEach((el) => {
+		el.style.paddingRight = paddingOffset;
+	});
+	body.style.paddingRight = paddingOffset;
+	let pagePosition = window.scrollY;
+	body.classList.add('disable-scroll');
+	body.dataset.position = pagePosition;
+	body.style.top = -pagePosition + 'px';
 };
 function enableScroll() {
 	let fixBlocks = document.querySelectorAll('.fix-blocks');
