@@ -22,6 +22,21 @@
 			margin-right: 50px;
 		}
 	}
+
+	&-week {
+		select {
+			min-width: 300px;
+			padding: 5px 10px;
+			outline: none;
+			box-shadow: none;
+			border: 1px solid $grey-dark;
+			background-color: #fff;
+
+			option {
+				background-color: #fff;
+			}
+		}
+	}
 }
 
 .tournament__select-list {

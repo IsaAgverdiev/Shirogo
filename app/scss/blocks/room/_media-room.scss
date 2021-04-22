@@ -3,7 +3,7 @@
 	.area,
 	.tournament-area,
 	.slider-donate {
-		width: 80%;
+		width: 85%;
 	}
 }
 
@@ -22,7 +22,7 @@
 	.area,
 	.tournament-area,
 	.slider-donate {
-		width: 90%;
+		width: 95%;
 	}
 
 	.slider-donate {
@@ -52,8 +52,16 @@
 	}
 
 	.tournament__header {
+		justify-content: center;
+
 		select {
-			min-width: 250px;
+			min-width: 200px;
+		}
+
+		&-week {
+			select {
+				min-width: 200px;
+			}
 		}
 
 		>select {
@@ -126,7 +134,16 @@
 		margin-bottom: 20px;
 
 		select {
-			min-width: 200px;
+			min-width: 150px;
+			max-width: 170px;
+		}
+
+		&-week {
+			width: 170px;
+			select {
+				min-width: 170px;
+				width: 170px;
+			}
 		}
 
 		>select {
@@ -151,6 +168,15 @@
 
 		select {
 			min-width: 150px;
+			width: 100px;
+		}
+
+		&-week {
+			width: 150px;
+			select {
+				min-width: 150px;
+				width: 100px;
+			}
 		}
 
 		>select {
