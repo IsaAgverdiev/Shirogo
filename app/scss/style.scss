@@ -1,36 +1,38 @@
 // Переменные
-@import 'vars.scss';
+@import 'vars';
 // Шрифты
-@import 'fonts.scss';
+@import 'fonts';
 // Библиотеки
-@import '_libs.scss';
+@import 'libs';
+@import 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
+
 // Глобальные стили
-@import 'global.scss';
+@import 'global';
 
 
 // header
-@import './blocks/parts/header.scss';
+@import './blocks/parts/header';
 // footer
-@import './blocks/parts/footer.scss';
+@import './blocks/parts/footer';
 
 // main
-@import './blocks/main/minecraft.scss';
-@import './blocks/main/tyan-bots.scss';
-@import './blocks/main/levelup.scss';
-@import './blocks/main/donate.scss';
+@import './blocks/main/minecraft';
+@import './blocks/main/tyan-bots';
+@import './blocks/main/levelup';
+@import './blocks/main/donate';
 
 // main
-@import './blocks/butik/services.scss';
-@import './blocks/butik/level-table.scss';
+@import './blocks/butik/services';
+@import './blocks/butik/level-table';
 
 // room
-@import './blocks/room/information.scss';
-@import './blocks/room/dotane-board.scss';
-@import './blocks/room/dotane-board.scss';
-@import './blocks/room/tournament.scss';
+@import './blocks/room/information';
+@import './blocks/room/dotane-board';
+@import './blocks/room/dotane-board';
+@import './blocks/room/tournament';
 
 // manga
-@import './blocks/manga/manga.scss';
+@import './blocks/manga/manga';
 
 // Медиа запросы
-@import 'media.scss';
+@import 'media';
