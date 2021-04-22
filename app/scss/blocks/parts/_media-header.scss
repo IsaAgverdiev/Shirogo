@@ -92,7 +92,7 @@
 		align-items: center;
 		justify-content: start;
 		min-height: 58px;
-		padding: 30px 20px;
+		padding-left: 20px;
 		border-radius: 0px;
 		background-color: $pink;
 		z-index: 100;
@@ -106,6 +106,7 @@
 	}
 
 	.user-btn768__text {
+		align-self: center;
 		padding: 0;
 	}
 
