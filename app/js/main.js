@@ -357,3 +357,11 @@ function enableScroll() {
 	window.scroll({ top: pagePosition, left: 0 });
 	body.removeAttribute('data-position')
 };
+
+// блокирование запросов iframe
+var iframe = document.querySelector('.level__inner');
+if (iframe) {
+	iframe.addEventListener('click', function (e) {
+		e.preventDefault()
+	})
+}

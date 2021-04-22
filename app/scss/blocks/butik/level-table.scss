@@ -1,21 +1,11 @@
 .level__wrap {
-	width: 60%;
-	min-height: 530px;
-	height: 1000px;
+	width: 80%;
+	min-height: 100%;
+	height: 800px;
 	position: relative;
 	border: 1px solid $grey-light;
 	margin: 0 auto 30px;
 	box-shadow: 20px 20px 40px 0px rgba(82, 82, 82, 0.2);
-
-	&::after {
-		content: '';
-		position: absolute;
-		display: block;
-		width: 98%;
-		height: 100%;
-		top: 0;
-		left: 0;
-	}
 
 	&::before {
 		content: '';
@@ -32,7 +22,7 @@
 .level__wrap-link {
 	display: none;
 	text-align: center;
-	width: 70%;
+	width: 100%;
 	padding: 30px 20px;
 	margin: 0 auto;
 	border-radius: 30px;
@@ -42,10 +32,11 @@
 }
 
 .level__inner {
+	display: block;
 	width: 100%;
 	height: 100%;
+	overflow-x: hidden;
 	border: none;
-	transform: scale(.9);
 }
 
 // .title-sistem {

@@ -9,16 +9,16 @@
 .bots-item {
 	background-color: $grey-light;
 	border-radius: 40px;
-	max-width: 400px;
-	max-height: 600px;
+	max-width: 380px;
+	min-height: 500px;
 	padding: 30px 40px;
 	box-shadow: 20px 20px 30px 10px rgba(82, 82, 82, 0.2);
-	margin-right: 10px;
+	// margin-right: 10px;
 	overflow: hidden;
 
 	&:nth-child(1) {
 		margin-right: 100px;
-		margin-left: 10px;
+		// margin-left: 10px;
 	}
 
 	&__body {
@@ -27,7 +27,7 @@
 		justify-content: flex-start;
 
 		p {
-			margin-top: 20px;
+			margin-top: 10px;
 			margin-bottom: 0;
 			padding: 0;
 		}

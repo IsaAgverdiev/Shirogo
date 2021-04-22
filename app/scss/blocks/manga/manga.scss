@@ -1,5 +1,6 @@
 .slider-manga {
 	max-width: 800px;
+	height: 1067px;
 	position: relative;
 	margin: 0 auto 100px;
 
@@ -32,7 +33,6 @@
 
 		&:active {
 			background-color: $pink;
-			transform: scaleX(1.1);
 		}
 	}
 
@@ -62,17 +62,10 @@
 		outline: none;
 		box-shadow: none;
 		border: 1px solid $grey-dark;
-		font-family: 'Raleway';
 		background-color: #fff;
 
 		&:hover {
 			border: 1px solid black;
-		}
-
-		option {
-			&:hover {
-				background-color: red;
-			}
 		}
 	}
 
