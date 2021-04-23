@@ -79,10 +79,6 @@
 			}
 		}
 
-		.final-table-2 {
-			// justify-content: flex-start;
-		}
-
 		.other-tf {
 			margin-top: 15px;
 		}
@@ -122,48 +118,6 @@
 		}
 	}
 }
-
 .tournament-area__inner-title {
 	color: $pink;
-}
-
-.tournament-area__inner-content {
-	padding-left: 25px;
-}
-
-.tournament-area__inner-content-table {
-	padding-bottom: 15px;
-	overflow-x: auto;
-	border-collapse: collapse;
-	margin: 0 auto;
-
-	tbody {
-		tr {
-			&:nth-child(odd) {
-				background-color: $grey-light;
-			}
-		}
-	}
-
-	tr {
-		&:first-child {
-			background-color: silver;
-		}
-	}
-
-	td {
-		border-right: 1px solid $grey-dark;
-
-		&:last-child {
-			border-right: none;
-		}
-	}
-
-	th {
-		border-right: 1px solid $grey-dark;
-
-		&:last-child {
-			border-right: none;
-		}
-	}
 }

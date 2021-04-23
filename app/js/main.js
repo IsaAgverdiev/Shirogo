@@ -7,6 +7,7 @@ $(document).ready(function () {
 		infinite: false,
 		draggable: false,
 		fade: true,
+		touchMove: true,
 		prevArrow: '<button id="prev" type="button" class="btn slick-prev">Назад<i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
 		nextArrow: '<button id="next" type="button" class="btn slick-next">Вперед<i class="fa fa-chevron-right" aria-hidden="true"></i></button>',
 	});
