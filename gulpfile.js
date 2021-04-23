@@ -15,7 +15,7 @@ function browsersync () {
 	browserSync.init({
 		server : {
 			baseDir: 'app/',
-			middleware: bssi({ baseDir: 'app/', ext: '.html' })
+			middleware: bssi({ baseDir: 'app/', ext: '.html' }),
 		},
 	});
 }
