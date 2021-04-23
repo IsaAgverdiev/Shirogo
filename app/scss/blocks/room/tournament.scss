@@ -1,14 +1,8 @@
-.tournament {
-	width: 100%;
-	overflow-x: hidden;
-}
-
 .tournament__header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 30px;
-	overflow-x: hidden;
 
 	select {
 		min-width: 300px;
@@ -57,7 +51,8 @@
 
 .tournament-area {
 	border: 1px solid $grey-light;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 	color: $grey-dark;
 	margin: 0 auto;
 	padding-bottom: 20px;
@@ -138,7 +133,7 @@
 
 .tournament-area__inner-content-table {
 	padding-bottom: 15px;
-	margin: 0;
+	overflow-x: auto;
 	border-collapse: collapse;
 	margin: 0 auto;
 
